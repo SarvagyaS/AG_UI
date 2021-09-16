@@ -156,7 +156,7 @@ input[type="number"] {
 
 /* line 142, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .global_pl {
-  padding-left: 70px;
+  padding-left: 30px;
 }
 
 /* line 146, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
@@ -167,6 +167,13 @@ input[type="number"] {
 }
 
 /* line 152, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+.container_inner {
+  width: 85%;
+  margin: auto;
+  max-width: 1920px;
+}
+
+/* line 158, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .btn {
   font-size: 1.4rem;
   font-weight: bold;
@@ -177,36 +184,36 @@ input[type="number"] {
   transition: 0.3s;
 }
 
-/* line 160, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 166, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .btn:hover {
   background-color: #272727;
   color: #fff;
 }
 
-/* line 166, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 172, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .btn-yellow {
   background-color: #FFD018;
 }
 
-/* line 170, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 176, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .btn-grey {
   background-color: #EFEFEF;
 }
 
-/* line 174, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 180, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .btn-transparent {
   background-color: transparent;
   border: 1px #272727 solid;
 }
 
-/* line 177, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 183, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .btn-transparent:hover {
   background-color: #FFD018;
   border-color: #FFD018;
   color: #272727;
 }
 
-/* line 184, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 190, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .overlay {
   position: fixed;
   top: 0;
@@ -218,28 +225,28 @@ input[type="number"] {
   display: none;
 }
 
-/* line 195, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 201, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .overflow-hide {
   overflow: hidden;
 }
 
-/* line 199, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 205, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .tab-content {
   display: none;
 }
 
-/* line 201, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 207, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .tab-content.active {
   display: block;
 }
 
 /*-----Custom Radio Buttons-----*/
-/* line 208, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 214, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont {
   display: flex;
 }
 
-/* line 210, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 216, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont .custom_radio {
   display: block;
   position: relative;
@@ -255,19 +262,19 @@ input[type="number"] {
   margin-right: 40px;
 }
 
-/* line 223, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 229, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont .custom_radio:last-child {
   margin-right: 0;
 }
 
-/* line 226, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 232, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont .custom_radio input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-/* line 232, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 238, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont .custom_radio .checkmark {
   position: absolute;
   top: 0;
@@ -279,7 +286,7 @@ input[type="number"] {
   border-radius: 50%;
 }
 
-/* line 241, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 247, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont .custom_radio .checkmark:after {
   content: "";
   position: absolute;
@@ -292,26 +299,26 @@ input[type="number"] {
   background: #fff;
 }
 
-/* line 254, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 260, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont .custom_radio:hover input ~ .checkmark {
   background-color: transparent;
   border: 1px #272727 solid;
 }
 
-/* line 259, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 265, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont .custom_radio input:checked ~ .checkmark {
   background-color: #272727;
   border: none;
 }
 
-/* line 264, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 270, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_radio_cont .custom_radio input:checked ~ .checkmark:after {
   display: block;
 }
 
 /*-----Custom Radio Buttons-----*/
 /*-----Custom Select Buttons-----*/
-/* line 274, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 280, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_select {
   background-color: transparent;
   border-bottom: 1px #272727 solid;
@@ -328,14 +335,14 @@ input[type="number"] {
   width: 100%;
 }
 
-/* line 288, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 294, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_select:focus-visible {
   outline: none;
 }
 
 /*-----Custom Select Buttons-----*/
 /*-----Custom Input Type-----*/
-/* line 298, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 304, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_input input[type=text] {
   font-size: 1.4rem;
   color: #272727;
@@ -347,19 +354,19 @@ input[type="number"] {
   width: 100%;
 }
 
-/* line 307, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 313, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_input input[type=text]::placeholder {
   color: #272727;
 }
 
-/* line 311, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 317, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_input input[type=text]:focus::placeholder {
   color: transparent;
 }
 
 /*-----Custom Input Type-----*/
 /*-----Custom Checkbox-----*/
-/* line 324, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 330, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_check_cont .custom_checkbox {
   display: block;
   position: relative;
@@ -373,7 +380,7 @@ input[type="number"] {
   user-select: none;
 }
 
-/* line 335, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 341, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_check_cont .custom_checkbox input {
   position: absolute;
   opacity: 0;
@@ -382,7 +389,7 @@ input[type="number"] {
   width: 0;
 }
 
-/* line 342, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 348, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_check_cont .custom_checkbox .checkmark {
   position: absolute;
   top: 0;
@@ -393,7 +400,7 @@ input[type="number"] {
   background-color: #eee;
 }
 
-/* line 350, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 356, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_check_cont .custom_checkbox .checkmark::after {
   content: "";
   position: absolute;
@@ -409,29 +416,29 @@ input[type="number"] {
   transform: rotate(35deg);
 }
 
-/* line 365, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 371, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_check_cont .custom_checkbox:hover input ~ .checkmark {
   background-color: #EFEFEF;
 }
 
-/* line 368, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 374, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_check_cont .custom_checkbox input:checked ~ .checkmark {
   background-color: #272727;
 }
 
-/* line 371, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 377, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .custom_check_cont .custom_checkbox input:checked ~ .checkmark:after {
   display: block;
 }
 
 /*-----Custom Checkbox-----*/
 /*-----Custom File Upload-----*/
-/* line 381, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 387, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .fileUpload {
   position: relative;
 }
 
-/* line 383, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 389, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .fileUpload span {
   display: inline-block;
   font-size: 1.4rem;
@@ -447,20 +454,20 @@ input[type="number"] {
   cursor: pointer;
 }
 
-/* line 396, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 402, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .fileUpload span:hover, .fileUpload span:active, .fileUpload span:focus {
   background: #FFD018;
   cursor: pointer;
 }
 
-/* line 402, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 408, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .fileUpload input {
   position: fixed;
   right: 100%;
   bottom: 100%;
 }
 
-/* line 406, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+/* line 412, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
 .fileUpload input.upload {
   position: absolute;
   top: 0;
@@ -476,6 +483,31 @@ input[type="number"] {
 }
 
 /*-----Custom File Upload-----*/
+/* line 430, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+.global-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+}
+
+/* line 435, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+.global-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: #919191;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* line 442, D:/Asthaguru/27th Aug/AG/scss/base/_reset.scss */
+.global-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #FFD018;
+  width: 25px;
+  border-radius: 10px;
+}
+
 /* line 2, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .sub_header {
   background-color: #F4F7F6;
@@ -676,7 +708,6 @@ header .main_header .container .nav ul li:hover .sub_nav_container {
 
 /* line 155, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec {
-  width: 22%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -684,18 +715,18 @@ header .main_header .container .login_sec {
   z-index: 200;
 }
 
-/* line 163, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 162, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .login_icon_btn {
   display: none;
   width: 38px;
 }
 
-/* line 166, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 165, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .login_icon_btn img {
   width: 100%;
 }
 
-/* line 171, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 170, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .search_btn {
   display: inline-flex;
   align-items: center;
@@ -706,12 +737,12 @@ header .main_header .container .login_sec .search_btn {
   margin-left: 10px;
 }
 
-/* line 179, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 178, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .search_btn img {
   width: 15px;
 }
 
-/* line 184, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 183, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .search_box {
   display: flex;
   position: absolute;
@@ -727,7 +758,7 @@ header .main_header .container .login_sec .search_box {
   z-index: -1;
 }
 
-/* line 197, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 196, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .search_box input[type=text] {
   display: block;
   width: 100%;
@@ -735,18 +766,18 @@ header .main_header .container .login_sec .search_box input[type=text] {
   font-size: 1.6rem;
 }
 
-/* line 203, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 202, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .search_box a {
   display: inline-block;
   width: 15px;
 }
 
-/* line 206, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 205, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .search_box a img {
   width: 100%;
 }
 
-/* line 210, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 209, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .login_sec .search_box.show {
   width: auto;
   left: 0;
@@ -755,7 +786,7 @@ header .main_header .container .login_sec .search_box.show {
   overflow: visible;
 }
 
-/* line 220, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 219, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger {
   display: none;
   width: 45px;
@@ -772,7 +803,7 @@ header .main_header .container .hamburger {
   cursor: pointer;
 }
 
-/* line 234, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 233, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger span {
   display: block;
   position: absolute;
@@ -796,23 +827,23 @@ header .main_header .container .hamburger span {
   transform-origin: left center;
 }
 
-/* line 255, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 254, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger span:nth-child(1) {
   top: 0px;
 }
 
-/* line 258, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 257, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger span:nth-child(2) {
   top: 13px;
 }
 
-/* line 261, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 260, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger span:nth-child(3) {
   bottom: 0;
   width: 60%;
 }
 
-/* line 268, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 267, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger.open span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -822,13 +853,13 @@ header .main_header .container .hamburger.open span:nth-child(1) {
   left: 8px;
 }
 
-/* line 276, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 275, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger.open span:nth-child(2) {
   width: 0%;
   opacity: 0;
 }
 
-/* line 280, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 279, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -839,7 +870,7 @@ header .main_header .container .hamburger.open span:nth-child(3) {
   width: 100%;
 }
 
-/* line 292, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
+/* line 291, D:/Asthaguru/27th Aug/AG/scss/base/_header.scss */
 header .main_header .container .hamburger:hover span {
   background: #FFD018;
 }
@@ -1012,11 +1043,11 @@ header .main_header .container .hamburger:hover span {
 /* line 13, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
 .global_heading h2::before {
   content: "";
-  width: 100%;
+  width: 150%;
   height: 1px;
   background-color: #FFD018;
   position: absolute;
-  left: -100px;
+  left: -180px;
   bottom: 7px;
 }
 
@@ -1056,6 +1087,74 @@ header .main_header .container .hamburger:hover span {
   font-size: 12px;
   font-weight: bold;
   color: #272727;
+}
+
+/* line 56, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.global_heading .breadcrumb ul {
+  display: flex;
+  align-items: center;
+}
+
+/* line 59, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.global_heading .breadcrumb ul li {
+  font-size: 1.4rem;
+}
+
+/* line 61, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.global_heading .breadcrumb ul li a {
+  display: block;
+  transition: 0.3s;
+}
+
+/* line 64, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.global_heading .breadcrumb ul li a:link {
+  font-weight: bold;
+}
+
+/* line 66, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.global_heading .breadcrumb ul li a:link::before {
+  content: "/";
+  font-size: 1.4rem;
+}
+
+/* line 70, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.global_heading .breadcrumb ul li a:link:hover {
+  color: #FFD018;
+}
+
+/* line 72, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.global_heading .breadcrumb ul li a:link:hover::before {
+  color: #272727;
+}
+
+/* line 79, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.global_heading .breadcrumb ul li:first-child {
+  margin-left: 0;
+}
+
+/* line 87, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.heading_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 91, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.heading_inner .global_heading {
+  width: 8%;
+}
+
+/* line 93, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.heading_inner .global_heading .auction_nav {
+  width: 100%;
+  margin-right: 0;
+}
+
+/* line 98, D:/Asthaguru/27th Aug/AG/scss/base/_heading.scss */
+.heading_inner h3 {
+  font-size: 2rem;
+  color: #FFD018;
+  font-weight: lighter;
 }
 
 /* line 2, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
@@ -1101,57 +1200,32 @@ header .main_header .container .hamburger:hover span {
   color: #fff;
 }
 
-/* line 36, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
-.auction_container .auction_way .auction_content .auction-pagination {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  text-align: left;
-}
-
-/* line 41, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
-.auction_container .auction_way .auction_content .auction-pagination .swiper-pagination-bullet {
-  opacity: 1;
-  background-color: #919191;
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-/* line 48, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
-.auction_container .auction_way .auction_content .auction-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #FFD018;
-  width: 25px;
-  border-radius: 10px;
-}
-
-/* line 57, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
+/* line 37, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
 .auction_container .auction_way .auction_slider_container {
   width: 68%;
   overflow: hidden;
 }
 
-/* line 60, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
+/* line 40, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
 .auction_container .auction_way .auction_slider_container .swiper-wrapper {
   width: 100%;
   height: auto;
 }
 
-/* line 64, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
+/* line 44, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
 .auction_container .auction_way .auction_slider_container .swiper-wrapper .item img {
   border-radius: 10px;
   width: 100%;
 }
 
-/* line 68, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
+/* line 48, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
 .auction_container .auction_way .auction_slider_container .swiper-wrapper .item .auction_info {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
 
-/* line 73, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
+/* line 53, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
 .auction_container .auction_way .auction_slider_container .swiper-wrapper .item .auction_info .auction_date h4 {
   font-size: 2rem;
   color: #FFD018;
@@ -1160,7 +1234,7 @@ header .main_header .container .hamburger:hover span {
   margin-bottom: 0;
 }
 
-/* line 80, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
+/* line 60, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
 .auction_container .auction_way .auction_slider_container .swiper-wrapper .item .auction_info .auction_date span {
   display: block;
   color: #272727;
@@ -1168,7 +1242,7 @@ header .main_header .container .hamburger:hover span {
   margin-top: 10px;
 }
 
-/* line 89, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
+/* line 69, D:/Asthaguru/27th Aug/AG/scss/base/_auctionway.scss */
 .auction_container .auction_way .auction_slider_container .swiper-wrapper .item .auction_info .auction_icon img {
   border-radius: 0;
   width: 25px;
@@ -1187,7 +1261,7 @@ header .main_header .container .hamburger:hover span {
 }
 
 /* line 9, D:/Asthaguru/27th Aug/AG/scss/base/_highlight.scss */
-.highlight_slider_container .swiper-wrapper .item:hover {
+.highlight_slider_container .swiper-wrapper .item:hover, .highlight_slider_container .swiper-wrapper .item.swiper-slide-active {
   box-shadow: 0px 20px 50px #ccc;
 }
 
@@ -1233,7 +1307,7 @@ header .main_header .container .hamburger:hover span {
 /* line 48, D:/Asthaguru/27th Aug/AG/scss/base/_highlight.scss */
 .highlight_slider_container .swiper-wrapper .item img {
   max-width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
   margin-top: 25px;
 }
@@ -1293,7 +1367,7 @@ header .main_header .container .hamburger:hover span {
 
 /* line 98, D:/Asthaguru/27th Aug/AG/scss/base/_highlight.scss */
 .highlight_slider_container .swiper-wrapper .item .highlight_bid h4 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-top: 10px;
 }
 
@@ -1347,7 +1421,7 @@ header .main_header .container .hamburger:hover span {
 
 /* line 1, D:/Asthaguru/27th Aug/AG/scss/base/_recent-auction.scss */
 .recent_slider_container {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 /* line 4, D:/Asthaguru/27th Aug/AG/scss/base/_recent-auction.scss */
@@ -1368,7 +1442,7 @@ header .main_header .container .hamburger:hover span {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 40px 30px;
+  padding: 30px;
   background-color: #F4F7F6;
   border-radius: 10px;
   transition: 0.5s;
@@ -1417,6 +1491,28 @@ header .main_header .container .hamburger:hover span {
 
 /* line 49, D:/Asthaguru/27th Aug/AG/scss/base/_recent-auction.scss */
 .recent_slider_container .swiper-wrapper .item .recent_content:hover a {
+  background-color: #FFD018;
+  border-color: #FFD018;
+}
+
+/* line 56, D:/Asthaguru/27th Aug/AG/scss/base/_recent-auction.scss */
+.recent_slider_container .swiper-wrapper .item.swiper-slide-active .recent_content {
+  background-color: transparent;
+}
+
+/* line 58, D:/Asthaguru/27th Aug/AG/scss/base/_recent-auction.scss */
+.recent_slider_container .swiper-wrapper .item.swiper-slide-active .recent_content h5 {
+  color: #FFD018;
+}
+
+/* line 61, D:/Asthaguru/27th Aug/AG/scss/base/_recent-auction.scss */
+.recent_slider_container .swiper-wrapper .item.swiper-slide-active .recent_content span {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* line 65, D:/Asthaguru/27th Aug/AG/scss/base/_recent-auction.scss */
+.recent_slider_container .swiper-wrapper .item.swiper-slide-active .recent_content a {
   background-color: #FFD018;
   border-color: #FFD018;
 }
@@ -1471,19 +1567,22 @@ header .main_header .container .hamburger:hover span {
 .services_slider_container .services_slider .swiper-wrapper .item img {
   width: 100%;
   margin-left: 30px;
-}
-
-/* line 41, D:/Asthaguru/27th Aug/AG/scss/base/_services.scss */
-.services_slider_container .services_slider .swiper-wrapper .item:hover {
-  transform: scale(1.1);
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 /* line 44, D:/Asthaguru/27th Aug/AG/scss/base/_services.scss */
-.services_slider_container .services_slider .swiper-wrapper .item:hover .services_content h5 {
+.services_slider_container .services_slider .swiper-wrapper .item:hover, .services_slider_container .services_slider .swiper-wrapper .item.swiper-slide-active {
+  transform: scale(1.1);
+}
+
+/* line 47, D:/Asthaguru/27th Aug/AG/scss/base/_services.scss */
+.services_slider_container .services_slider .swiper-wrapper .item:hover .services_content h5, .services_slider_container .services_slider .swiper-wrapper .item.swiper-slide-active .services_content h5 {
   color: #FFD018;
 }
 
-/* line 53, D:/Asthaguru/27th Aug/AG/scss/base/_services.scss */
+/* line 56, D:/Asthaguru/27th Aug/AG/scss/base/_services.scss */
 .services_slider_container .services_btn {
   position: absolute;
   bottom: -18px;
@@ -1558,29 +1657,31 @@ header .main_header .container .hamburger:hover span {
 /* line 48, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .swiper-wrapper .item img {
   max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
 }
 
-/* line 51, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 53, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .swiper-wrapper .item h5 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: lighter;
   margin-top: 20px;
 }
 
-/* line 56, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 58, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .swiper-wrapper .item p {
   font-size: 1.4rem;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
-/* line 60, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 62, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .swiper-wrapper .item h4 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-top: 25px;
 }
 
-/* line 65, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 67, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .swiper-wrapper .item .record_lot {
   position: absolute;
   bottom: -12px;
@@ -1590,7 +1691,7 @@ header .main_header .container .hamburger:hover span {
   right: 0;
 }
 
-/* line 72, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 74, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .swiper-wrapper .item .record_lot span {
   background-color: #EFEFEF;
   font-size: 1.2rem;
@@ -1601,7 +1702,7 @@ header .main_header .container .hamburger:hover span {
   text-transform: uppercase;
 }
 
-/* line 85, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 87, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .price_btn {
   position: absolute;
   bottom: -18px;
@@ -1611,7 +1712,7 @@ header .main_header .container .hamburger:hover span {
   text-align: center;
 }
 
-/* line 94, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 96, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .auction_nav {
   display: flex;
   justify-content: space-between;
@@ -1624,7 +1725,7 @@ header .main_header .container .hamburger:hover span {
   margin: auto;
 }
 
-/* line 104, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 106, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .auction_nav .slider_nav {
   position: static;
   margin-top: 0;
@@ -1635,7 +1736,7 @@ header .main_header .container .hamburger:hover span {
   padding: 18px;
 }
 
-/* line 112, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
+/* line 114, D:/Asthaguru/27th Aug/AG/scss/base/_price-lot.scss */
 .price_container .price_slider_container .auction_nav .slider_nav::after {
   font-size: 12px;
   font-weight: bold;
@@ -1656,7 +1757,7 @@ header .main_header .container .hamburger:hover span {
   background-color: #EFEFEF;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 48%;
 }
 
 /* line 13, D:/Asthaguru/27th Aug/AG/scss/base/_artist-month.scss */
@@ -1800,12 +1901,12 @@ header .main_header .container .hamburger:hover span {
 }
 
 /* line 24, D:/Asthaguru/27th Aug/AG/scss/base/_our-collectors.scss */
-.ourCollector_container .ourCollector_slider_container .swiper-wrapper .item:hover {
+.ourCollector_container .ourCollector_slider_container .swiper-wrapper .item:hover, .ourCollector_container .ourCollector_slider_container .swiper-wrapper .item.swiper-slide-next {
   border: 7px solid #272727;
 }
 
 /* line 26, D:/Asthaguru/27th Aug/AG/scss/base/_our-collectors.scss */
-.ourCollector_container .ourCollector_slider_container .swiper-wrapper .item:hover .collectorProfile {
+.ourCollector_container .ourCollector_slider_container .swiper-wrapper .item:hover .collectorProfile, .ourCollector_container .ourCollector_slider_container .swiper-wrapper .item.swiper-slide-next .collectorProfile {
   opacity: 1;
 }
 
@@ -1874,7 +1975,7 @@ header .main_header .container .hamburger:hover span {
 
 /* line 75, D:/Asthaguru/27th Aug/AG/scss/base/_our-collectors.scss */
 .ourCollector_container .ourCollector_slider_container .swiper-wrapper .collectorProfile .quoteImg {
-  background: url("../images/quote.svg") no-repeat 0 0;
+  background: url("/images/quote.svg") no-repeat 0 0;
   width: 55px;
   height: 40px;
   background-size: contain;
@@ -1917,15 +2018,680 @@ header .main_header .container .hamburger:hover span {
   height: 100%;
 }
 
-/* line 2, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
-.news_container .container {
-  text-align: center;
+/* line 1, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container {
+  margin-bottom: 70px;
 }
 
 /* line 4, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
-.news_container .container img {
-  max-width: 100%;
+.news_container .container_inner .news_tabs {
+  border-bottom: 2px #FFD018 solid;
+}
+
+/* line 6, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tabs ul {
+  display: flex;
+}
+
+/* line 8, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tabs ul li {
+  margin-right: 2px;
+}
+
+/* line 10, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tabs ul li:last-child {
+  margin-right: 0;
+}
+
+/* line 13, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tabs ul li a {
+  display: block;
+  font-size: 1.6rem;
+  background-color: #F4F7F6;
+  padding: 10px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* line 20, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tabs ul li a.active {
+  background-color: #FFD018;
+}
+
+/* line 29, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 33, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec {
+  width: 65%;
+}
+
+/* line 35, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec .big_news {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 38, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec .big_news .big_news_img {
+  width: 48%;
+}
+
+/* line 40, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec .big_news .big_news_img img {
+  width: 100%;
+}
+
+/* line 44, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec .big_news .big_news_content {
+  width: 48%;
+}
+
+/* line 46, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec .big_news .big_news_content .tag {
+  display: inline-block;
+  background-color: #272727;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+/* line 56, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec .big_news .big_news_content h4 {
+  font-size: 2rem;
+  color: #FFD018;
+  font-weight: lighter;
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+/* line 63, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec .big_news .big_news_content p {
+  font-size: 1.4rem;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+/* line 68, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .left_sec .big_news .big_news_content a {
+  margin-top: 30px;
+}
+
+/* line 75, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .right_sec {
+  width: 30%;
+}
+
+/* line 77, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .right_sec ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+}
+
+/* line 83, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .right_sec ul li {
+  margin-bottom: 10px;
+}
+
+/* line 85, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .right_sec ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 89, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .right_sec ul li a img {
+  max-width: 120px;
+  margin-right: 20px;
+}
+
+/* line 93, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .right_sec ul li a h5 {
+  font-size: 1.8rem;
+  color: #FFD018;
+  font-weight: lighter;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+/* line 100, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .right_sec ul li a .date {
+  margin-top: 0;
+}
+
+/* line 104, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .right_sec ul li a:hover h5 {
+  color: #272727;
+}
+
+/* line 113, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_content .date {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: "PrataRegular";
+}
+
+/* line 121, D:/Asthaguru/27th Aug/AG/scss/base/_news.scss */
+.news_container .container_inner .news_tab_content .news_btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* line 1, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.who_banner {
+  margin-top: 30px;
+}
+
+/* line 3, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.who_banner img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* line 7, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.who_banner p {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+/* line 15, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container .culture_content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* line 20, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container .culture_content .left_sec {
+  width: 50%;
+  overflow: hidden;
+}
+
+/* line 23, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container .culture_content .left_sec .swiper-wrapper {
+  width: 100%;
+}
+
+/* line 25, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container .culture_content .left_sec .swiper-wrapper img {
+  width: 100%;
+}
+
+/* line 29, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container .culture_content .left_sec .global_heading {
+  margin-top: 20px;
+}
+
+/* line 31, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container .culture_content .left_sec .global_heading .auction_nav {
+  width: 15%;
+  margin: 0 auto;
+}
+
+/* line 37, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container .culture_content .right_sec {
+  width: 48%;
+}
+
+/* line 42, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container p {
+  font-size: 1.4rem;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+/* line 46, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 51, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.culture_container .culture_text {
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* line 57, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.values_container {
+  background-color: #F4F7F6;
+}
+
+/* line 59, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.values_container .values_cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 62, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.values_container .values_cont .left_sec {
+  width: 45%;
+  overflow: hidden;
+  padding-top: 50px;
+}
+
+/* line 66, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.values_container .values_cont .left_sec .value_content {
+  margin-top: 50px;
+  position: relative;
+}
+
+/* line 69, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.values_container .values_cont .left_sec .value_content p {
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+
+/* line 73, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.values_container .values_cont .left_sec .value_content .global-pagination {
+  bottom: -70px;
+}
+
+/* line 78, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.values_container .values_cont .right_sec {
+  width: 50%;
+  overflow: hidden;
+}
+
+/* line 81, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.values_container .values_cont .right_sec img {
+  width: 100%;
+}
+
+/* line 89, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_content {
+  margin-top: 30px;
+}
+
+/* line 91, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_content p {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+/* line 98, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team {
+  margin-top: 50px;
+}
+
+/* line 100, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* line 104, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li {
+  width: 30%;
+  text-align: center;
+  padding: 30px;
+  padding-top: 110px;
+  border-radius: 5px;
+  margin-top: 150px;
+  margin-bottom: 70px;
+  box-shadow: 0px 20px 50px #ccc;
+  position: relative;
+}
+
+/* line 114, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li img {
+  width: 70%;
   margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50%;
+  border-radius: 50%;
+}
+
+/* line 123, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li h4 {
+  font-size: 1.8rem;
+  color: #FFD018;
+  font-weight: lighter;
+}
+
+/* line 127, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li h4 span {
+  display: block;
+  font-size: 1.4rem;
+  color: #272727;
+  margin-top: 10px;
+}
+
+/* line 135, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li a {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* line 138, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li a .icon_cont {
+  background-color: #F4F7F6;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* line 150, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li a .icon_cont svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* line 155, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li a span {
+  display: block;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+/* line 161, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li a:hover .icon_cont {
+  background-color: #FFD018;
+}
+
+/* line 164, D:/Asthaguru/27th Aug/AG/scss/base/_who-we-are.scss */
+.management_container .management_team ul li a:hover span {
+  color: #FFD018;
+}
+
+/* line 1, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container {
+  background-color: #F4F7F6;
+  padding: 50px 0;
+}
+
+/* line 5, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont {
+  margin-top: 30px;
+  position: relative;
+}
+
+/* line 8, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider {
+  overflow: hidden;
+}
+
+/* line 10, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider .item {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+/* line 14, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider .item .job_head_cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 19, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider .item .job_head_cont .job_head h4 {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+
+/* line 23, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider .item .job_head_cont .job_head span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* line 31, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider .item .job_head_cont .job_share a {
+  background-color: #F4F7F6;
+  padding: 12px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* line 43, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider .item .job_head_cont .job_share a svg {
+  width: 100%;
+}
+
+/* line 49, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider .item p {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+
+/* line 55, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .latestjobs_slider .item a {
+  margin-top: 20px;
+}
+
+/* line 60, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .global_heading {
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: 45%;
+}
+
+/* line 65, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.latest_jobs_container .latestjobs_cont .global_heading .auction_nav {
+  width: 100% !important;
+  margin-right: 0;
+}
+
+/* line 73, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container {
+  background-color: #272727;
+  padding-top: 50px;
+  position: relative;
+}
+
+/* line 77, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container::after {
+  content: "";
+  width: 100%;
+  background-color: #fff;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 87, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container .container_inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 90, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container .container_inner .left_sec {
+  width: 45%;
+}
+
+/* line 92, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container .container_inner .left_sec .heading_inner {
+  display: block;
+}
+
+/* line 94, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container .container_inner .left_sec .heading_inner p {
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 30px;
+  margin-top: 20px;
+  font-weight: lighter;
+}
+
+/* line 104, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container .container_inner .right_sec {
+  width: 50%;
+  position: relative;
+  z-index: 50;
+}
+
+/* line 108, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container .container_inner .right_sec img {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* line 113, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container .container_inner .right_sec a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45%;
+}
+
+/* line 126, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container.applyjob_cont {
+  padding-bottom: 50px;
+}
+
+/* line 128, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container.applyjob_cont::after {
+  content: none;
+}
+
+/* line 131, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container.applyjob_cont .right_sec {
+  margin-top: 50px;
+}
+
+/* line 134, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container.applyjob_cont .right_sec .white_form li {
+  margin-bottom: 20px;
+}
+
+/* line 137, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container.applyjob_cont .right_sec .white_form li .custom_input input[type=text] {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* line 140, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container.applyjob_cont .right_sec .white_form li .custom_input input[type=text]::placeholder {
+  color: #fff;
+}
+
+/* line 145, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.workenv_container.applyjob_cont .right_sec .white_form li .file_sec {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* line 157, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont {
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+/* line 160, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider {
+  padding: 30px;
+}
+
+/* line 162, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item {
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 12px #eee;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+/* line 167, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item .employeehead_cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 171, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item .employeehead_cont .employee_img {
+  max-width: 170px;
+}
+
+/* line 173, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item .employeehead_cont .employee_img img {
+  width: 100%;
+}
+
+/* line 177, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item .employeehead_cont .employee_name {
+  margin-left: 30px;
+}
+
+/* line 179, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item .employeehead_cont .employee_name h4 {
+  color: #FFD018;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  line-height: 30px;
+}
+
+/* line 185, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item .employeehead_cont .employee_name span {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+/* line 192, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item p {
+  font-size: 1.4rem;
+  line-height: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* line 199, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.employee_container .employee_cont .employee_slider .item .quote_icon {
+  text-align: right;
+  margin-top: 30px;
+}
+
+/* line 209, D:/Asthaguru/27th Aug/AG/scss/base/_careers.scss */
+.subscribe_container.mt_70 {
+  margin-top: 0;
 }
 
 /* line 1, D:/Asthaguru/27th Aug/AG/scss/base/_newsletter.scss */
@@ -2155,6 +2921,681 @@ footer .sub_footer .container .right_sec p {
   font-size: 1.2rem;
 }
 
+/* line 3, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .headingMedium {
+  margin-top: 30px;
+}
+
+/* line 7, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .limitBoxs {
+  display: flex;
+}
+
+/* line 9, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .limitBoxs .bid_limit_box {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 15px;
+  margin-right: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #ccc;
+}
+
+/* line 16, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .limitBoxs .bid_limit_box h5 {
+  font-size: 1.4rem;
+  font-family: "LoraItalic";
+}
+
+/* line 20, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .limitBoxs .bid_limit_box ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* line 25, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .limitBoxs .bid_limit_box ul li {
+  margin-bottom: 0;
+}
+
+/* line 27, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .limitBoxs .bid_limit_box ul li h4 {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+/* line 33, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .limitBoxs .bid_limit_box:last-child {
+  width: 35%;
+}
+
+/* line 39, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 43, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox {
+  width: 32%;
+}
+
+/* line 45, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .headingMedium {
+  margin-top: 0;
+}
+
+/* line 48, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .headSec {
+  margin-bottom: 15px;
+}
+
+/* line 50, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .headSec .viewAll {
+  text-decoration: underline;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+/* line 54, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .headSec .viewAll:hover {
+  color: #FFD018;
+}
+
+/* line 59, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList {
+  width: 100%;
+}
+
+/* line 61, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li {
+  width: 100%;
+  box-shadow: 0px 1px 16px 0px #ccc;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* line 70, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 73, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .leftSec {
+  display: flex;
+  align-items: center;
+}
+
+/* line 76, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .leftSec .imgSec {
+  width: 70px;
+}
+
+/* line 78, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .leftSec .imgSec img {
+  width: 100%;
+}
+
+/* line 82, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .leftSec .itemDetail {
+  margin-left: 10px;
+}
+
+/* line 84, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .leftSec .itemDetail h5 {
+  font-size: 1.2rem;
+  font-family: "LoraItalic";
+  color: #FFD018;
+  font-weight: normal;
+}
+
+/* line 90, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .leftSec .itemDetail .price {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* line 97, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .rightSec {
+  padding-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100px;
+  justify-content: flex-end;
+}
+
+/* line 104, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .rightSec span {
+  background: #EFEFEF;
+  font-size: 1rem;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-family: "LoraRegular";
+}
+
+/* line 113, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .rightSec .leading {
+  background: #7EBF02;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+/* line 121, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .rightSec.shareIconSec {
+  align-items: baseline;
+  width: 30px;
+  margin-top: 3px;
+}
+
+/* line 125, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox .bidsList li .rightSec.shareIconSec img {
+  width: 100%;
+}
+
+/* line 133, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec {
+  width: 30%;
+  margin-top: 34px;
+  box-shadow: 0px 1px 16px 0px #0000001a;
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* line 139, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box {
+  padding: 15px;
+}
+
+/* line 141, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .headingMedium {
+  padding-left: 5px;
+}
+
+/* line 144, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .calenderSec {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* line 147, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .calenderSec img {
+  width: 80%;
+}
+
+/* line 151, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .eventSec {
+  margin-top: 20px;
+  max-height: 120px;
+  padding-right: 30px;
+}
+
+/* line 155, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .eventSec ul {
+  display: block;
+  width: 100%;
+}
+
+/* line 158, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .eventSec ul li {
+  margin-bottom: 25px;
+}
+
+/* line 160, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .eventSec ul li h6 {
+  font-size: 1.2rem;
+  font-family: "LoraItalic";
+  font-weight: normal;
+}
+
+/* line 165, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .eventSec ul li .eventDate {
+  font-size: 1.3rem;
+  font-weight: normal;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* line 171, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox.calenderSec .box .eventSec ul li:last-child {
+  margin-right: 0;
+}
+
+/* line 179, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsListBoxes .bidBox:last-child {
+  margin-right: 0;
+}
+
+/* line 184, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsCharts {
+  margin-top: 0;
+}
+
+/* line 186, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsCharts .bidsRatio {
+  margin-top: 34px;
+  box-shadow: 0px 1px 16px 0px #ccc;
+  background: #fff;
+  border-radius: 4px;
+  padding: 18px 15px;
+}
+
+/* line 192, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsCharts .bidsRatio .ratioSec {
+  text-align: center;
+}
+
+/* line 194, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .bidsCharts .bidsRatio .ratioSec img {
+  width: 100%;
+}
+
+/* line 200, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .notifySec {
+  padding: 0 30px 0 5px;
+  margin-top: 20px;
+  max-height: 350px;
+}
+
+/* line 205, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .notifySec ul li {
+  margin-bottom: 30px !important;
+}
+
+/* line 207, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .notifySec ul li .content {
+  font-size: 1.4rem;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+/* line 212, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .notifySec ul li span {
+  color: #FFD018;
+  margin-top: 5px;
+  display: block;
+  font-size: 1.2rem;
+}
+
+/* line 219, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .notifySec ul li:last-child {
+  margin-right: 0;
+}
+
+/* line 226, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .highlightInnerSec {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+/* line 229, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .highlightInnerSec .auction_nav {
+  width: 10%;
+  margin-right: 3%;
+}
+
+/* line 233, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .highlightInnerSec .highlight_slider_container {
+  width: 101%;
+}
+
+/* line 238, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .highlightInnerSec .highlight_sliderInner .swiper-wrapper .item {
+  padding: 0 10px;
+  border-right: 2px solid #e5e5e5;
+}
+
+/* line 241, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .highlightInnerSec .highlight_sliderInner .swiper-wrapper .item:hover {
+  box-shadow: none;
+}
+
+/* line 249, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 253, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .headingMedium {
+  margin-top: 5px;
+}
+
+/* line 256, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec {
+  width: 48%;
+}
+
+/* line 258, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec {
+  box-shadow: 0px 1px 16px 0px #ccc;
+  background: #fff;
+  border-radius: 4px;
+  padding: 18px 22px;
+}
+
+/* line 263, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* line 267, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .imgSec {
+  width: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* line 271, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .imgSec img {
+  width: 100%;
+}
+
+/* line 275, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .about {
+  margin-left: 30px;
+}
+
+/* line 277, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .about h3 {
+  color: #FFD018;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+/* line 282, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .about h5 {
+  color: #272727;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+/* line 288, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .about ul {
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+}
+
+/* line 292, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .about ul li {
+  margin-bottom: 10px;
+}
+
+/* line 294, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .about ul li a {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #272727;
+}
+
+/* line 299, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .contentExecutiveSec .aboutDetail .about ul li a .icon {
+  display: inline-block;
+  background: url(../images/like.svg) no-repeat 0 0;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  margin-right: 10px;
+}
+
+/* line 313, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .downloadApp {
+  margin-top: 5%;
+  box-shadow: 0px 1px 16px 0px #ccc;
+  background: #fff;
+  border-radius: 4px;
+  padding: 18px 22px;
+}
+
+/* line 319, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .downloadApp img {
+  width: 100%;
+}
+
+/* line 322, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .downloadApp ul {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* line 327, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .downloadApp ul li {
+  margin-bottom: 0;
+  width: 35%;
+}
+
+/* line 331, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .downloadApp ul li a img {
+  width: 100%;
+}
+
+/* line 335, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .leftSec .downloadApp ul li:last-child {
+  margin-left: 30px;
+}
+
+/* line 342, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec {
+  box-shadow: 0px 1px 16px 0px #ccc;
+  background: #fff;
+  border-radius: 4px;
+  padding: 18px 22px;
+  width: 48%;
+  position: relative;
+}
+
+/* line 349, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .daysToGo {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-align: center;
+}
+
+/* line 354, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .daysToGo span {
+  font-size: 1.6rem;
+  color: #272727;
+  font-weight: bold;
+  background: #FFF8DE;
+  padding: 5px;
+  border-radius: 50%;
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 25px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 368, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .daysToGo p {
+  font-size: 1rem;
+  color: #272727;
+  margin-top: 5px;
+}
+
+/* line 374, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail {
+  display: flex;
+  margin-top: 20px;
+}
+
+/* line 377, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail .imgSec {
+  width: 100px;
+}
+
+/* line 379, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail .imgSec img {
+  width: 100%;
+}
+
+/* line 383, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail .about {
+  margin: 10px 0 0 20px;
+}
+
+/* line 385, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail .about h3 {
+  font-size: 1.6rem;
+  color: #272727;
+}
+
+/* line 389, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail .about h5 {
+  font-size: 1.2rem;
+  color: #272727;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+/* line 395, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail .about .onderNo {
+  margin-top: 30px;
+}
+
+/* line 397, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail .about .onderNo h3 {
+  font-size: 1.6rem;
+  color: #272727;
+  font-weight: normal;
+}
+
+/* line 402, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .rightSec .aboutDetail .about .onderNo h5 {
+  font-size: 1.2rem;
+  color: #272727;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+/* line 413, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 50px;
+}
+
+/* line 417, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .trackIcon {
+  width: 80px;
+  position: absolute;
+  top: 0;
+}
+
+/* line 421, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .trackIcon img {
+  width: 100%;
+}
+
+/* line 425, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .progressBar {
+  width: 100%;
+  background: #EFEFEF;
+  height: 8px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* line 431, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .progressBar .progress {
+  position: absolute;
+  height: 8px;
+  border-radius: 10px 0 0 10px;
+  background: #FFD018;
+}
+
+/* line 436, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .progressBar .progress:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 18px;
+  width: 2px;
+  background: #FFD018;
+  transform: translate(0, -50%);
+}
+
+/* line 448, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .list {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 453, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .list li {
+  color: #272727;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+/* line 460, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .list li:first-child {
+  text-align: left;
+}
+
+/* line 463, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .trackingSteps .list li:last-child {
+  text-align: right;
+}
+
+/* line 469, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.dashboard_container .myDashboard .boxsesSecfooter .note {
+  color: #272727;
+  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: "LoraItalic";
+  margin-top: 20px;
+}
+
+/* line 480, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.headingMedium {
+  font-size: 1.6rem;
+}
+
+/* line 483, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.display-flex {
+  display: flex;
+}
+
+/* line 486, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.justifySpaceBetween {
+  justify-content: space-between;
+}
+
+/* line 489, D:/Asthaguru/27th Aug/AG/scss/base/_dashboard.scss */
+.alignItemCenter {
+  align-items: center;
+}
+
 /* line 1, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container {
   display: flex;
@@ -2286,7 +3727,7 @@ footer .sub_footer .container .right_sec p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 /* line 105, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
@@ -2423,25 +3864,25 @@ footer .sub_footer .container .right_sec p {
   padding: 14px 30px 10px;
 }
 
-/* line 214, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
-.dashboard_container .dashboard_section .dashboard_sec .bid_limit_box {
+/* line 215, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box {
   background-color: #fff;
-  width: 50%;
   margin-top: 50px;
   padding: 20px;
   border-radius: 10px;
   border: 1px #EFEFEF solid;
+  width: 50%;
 }
 
-/* line 221, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
-.dashboard_container .dashboard_section .dashboard_sec .bid_limit_box h5 {
+/* line 222, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box h5 {
   font-size: 1.4rem;
   position: relative;
   display: inline-block;
 }
 
-/* line 225, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
-.dashboard_container .dashboard_section .dashboard_sec .bid_limit_box h5 a {
+/* line 226, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box h5 a {
   position: absolute;
   right: -20px;
   top: -15px;
@@ -2457,8 +3898,8 @@ footer .sub_footer .container .right_sec p {
   justify-content: center;
 }
 
-/* line 239, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
-.dashboard_container .dashboard_section .dashboard_sec .bid_limit_box h5 a .tooltiptext {
+/* line 240, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box h5 a .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: #FFD018;
@@ -2473,13 +3914,13 @@ footer .sub_footer .container .right_sec p {
   margin-left: -60px;
 }
 
-/* line 254, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
-.dashboard_container .dashboard_section .dashboard_sec .bid_limit_box h5 a:hover .tooltiptext {
+/* line 255, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box h5 a:hover .tooltiptext {
   visibility: visible;
 }
 
-/* line 260, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
-.dashboard_container .dashboard_section .dashboard_sec .bid_limit_box ul {
+/* line 261, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box ul {
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -2487,57 +3928,62 @@ footer .sub_footer .container .right_sec p {
 }
 
 /* line 266, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
-.dashboard_container .dashboard_section .dashboard_sec .bid_limit_box ul li span {
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box ul li {
+  margin-bottom: 0;
+}
+
+/* line 268, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box ul li span {
   display: block;
   font-size: 1.2rem;
 }
 
-/* line 270, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
-.dashboard_container .dashboard_section .dashboard_sec .bid_limit_box ul li h4 {
+/* line 272, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+.dashboard_container .dashboard_section .dashboard_sec.myprofile .bid_limit_box ul li h4 {
   font-size: 2rem;
   margin-top: 10px;
 }
 
-/* line 280, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+/* line 283, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container .postal_sec, .dashboard_container .biling_sec, .dashboard_container .bank_sec {
   margin-top: 50px;
   padding-top: 50px;
   border-top: 1px #272727 solid;
 }
 
-/* line 284, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+/* line 287, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container .postal_sec h3, .dashboard_container .biling_sec h3, .dashboard_container .bank_sec h3 {
   font-size: 1.8rem;
 }
 
-/* line 288, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+/* line 291, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container .postal_sec form, .dashboard_container .biling_sec form, .dashboard_container .bank_sec form {
   margin-top: 30px;
 }
 
-/* line 290, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+/* line 293, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container .postal_sec form .contry_sec, .dashboard_container .biling_sec form .contry_sec, .dashboard_container .bank_sec form .contry_sec {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 293, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+/* line 296, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container .postal_sec form .contry_sec select, .dashboard_container .postal_sec form .contry_sec input, .dashboard_container .biling_sec form .contry_sec select, .dashboard_container .biling_sec form .contry_sec input, .dashboard_container .bank_sec form .contry_sec select, .dashboard_container .bank_sec form .contry_sec input {
   width: 45%;
 }
 
-/* line 298, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+/* line 301, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container .postal_sec form .billing_add, .dashboard_container .biling_sec form .billing_add, .dashboard_container .bank_sec form .billing_add {
   margin-top: 30px;
 }
 
-/* line 302, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+/* line 305, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container .postal_sec form .file_sec, .dashboard_container .biling_sec form .file_sec, .dashboard_container .bank_sec form .file_sec {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 305, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
+/* line 308, D:/Asthaguru/27th Aug/AG/scss/base/_profile.scss */
 .dashboard_container .postal_sec form .file_sec input[type=text], .dashboard_container .biling_sec form .file_sec input[type=text], .dashboard_container .bank_sec form .file_sec input[type=text] {
   margin-right: 25px;
 }
@@ -2547,20 +3993,24 @@ footer .sub_footer .container .right_sec p {
   .pos_relative {
     position: relative;
   }
-  /* line 7, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 6, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .mt_70 {
+    margin-top: 50px;
+  }
+  /* line 11, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .sub_header {
     display: none;
     background-color: #fff;
   }
-  /* line 10, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 14, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .sub_header .container {
     width: 100%;
   }
-  /* line 12, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 16, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .sub_header .container ul {
     width: 100%;
   }
-  /* line 17, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 21, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .sub_header .container ul li a.subnav_link::after {
     content: "";
     background: url("../images/downarrow.svg") no-repeat center right;
@@ -2570,27 +4020,27 @@ footer .sub_footer .container .right_sec p {
     position: absolute;
     right: 0;
   }
-  /* line 29, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 33, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .sub_header .container ul li .sub_nav ul {
     position: static;
     box-shadow: none;
     background-color: #fff;
   }
-  /* line 33, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 37, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .sub_header .container ul li .sub_nav ul li {
     padding: 0;
     border-bottom: 1px #272727 solid;
   }
-  /* line 36, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 40, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .sub_header .container ul li .sub_nav ul li a {
     text-align: left;
     border-bottom: none;
   }
-  /* line 40, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 44, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .sub_header .container ul li .sub_nav ul li:last-child {
     border-bottom: none;
   }
-  /* line 52, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 56, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav {
     display: none;
     position: absolute;
@@ -2605,21 +4055,21 @@ footer .sub_footer .container .right_sec p {
     padding-bottom: 70px;
     overflow-y: auto;
   }
-  /* line 65, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 69, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul {
     display: block;
   }
-  /* line 67, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 71, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li {
     border-bottom: 1px #272727 solid;
     margin-bottom: 10px;
   }
-  /* line 70, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 74, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li a {
     padding: 10px 0;
     position: relative;
   }
-  /* line 74, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 78, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li a.subnav_link::after {
     content: "";
     background: url("../images/downarrow.svg") no-repeat center right;
@@ -2629,11 +4079,11 @@ footer .sub_footer .container .right_sec p {
     position: absolute;
     right: 0;
   }
-  /* line 84, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 88, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li a span {
     display: none;
   }
-  /* line 88, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 92, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li .sub_nav_container {
     display: none;
     margin: 0;
@@ -2642,113 +4092,113 @@ footer .sub_footer .container .right_sec p {
     position: static;
     transition: none;
   }
-  /* line 95, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 99, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li .sub_nav_container ul {
     margin-left: 0;
   }
-  /* line 97, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 101, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li .sub_nav_container ul li {
     border-bottom: none;
   }
-  /* line 99, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 103, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li .sub_nav_container ul li a {
     text-align: left;
   }
-  /* line 101, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 105, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li .sub_nav_container ul li a:after {
     display: none;
   }
-  /* line 106, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 110, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li .sub_nav_container ul::before {
     display: none;
   }
-  /* line 110, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 114, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .nav ul li .sub_nav_container img {
     display: none;
   }
-  /* line 117, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 121, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .logo {
     width: 35%;
   }
-  /* line 121, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 125, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .login_sec {
     width: 50%;
   }
-  /* line 123, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 127, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .login_sec .login_btn {
     display: none;
   }
-  /* line 126, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 130, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .login_sec .login_icon_btn {
     display: block;
     width: 30px;
   }
-  /* line 132, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 136, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   header .main_header .container .hamburger {
     display: block;
     width: 35px;
     margin-left: 15px;
   }
-  /* line 141, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 145, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .global_pl {
     padding-left: 30px;
   }
-  /* line 146, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 150, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .global_heading h2 {
     font-size: 2.5rem;
   }
-  /* line 148, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 152, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .global_heading h2::before, .global_heading h2::after {
     bottom: 4px;
   }
-  /* line 152, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 156, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .global_heading .auction_nav {
     display: none;
     margin-right: 0;
   }
-  /* line 158, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 162, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .auction_container {
     padding-top: 50px;
     padding-left: 0;
     width: 90%;
     margin: auto;
   }
-  /* line 163, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 167, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .auction_container .auction_way {
     display: block;
   }
-  /* line 165, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 169, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .auction_container .auction_way .auction_content, .auction_container .auction_way .auction_content p, .auction_container .auction_way .auction_slider_container {
     width: 100%;
   }
-  /* line 168, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 172, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .auction_container .auction_way .auction_slider_container {
     margin-top: 30px;
     padding-bottom: 50px;
   }
-  /* line 175, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 179, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .highlight_container {
     width: 90%;
     margin: auto;
     margin-top: 70px;
   }
-  /* line 179, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 183, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .highlight_container .highlight_slider_container {
     margin-top: 0;
   }
-  /* line 184, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 188, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .recent_auction_container {
     width: 90%;
     margin: auto;
     margin-top: 70px;
   }
-  /* line 188, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 192, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .recent_auction_container .recent_slider_container {
     width: 90%;
     margin: auto;
     margin-top: 30px;
   }
-  /* line 194, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 198, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .recent_auction_container .recent_slider_container .swiper-wrapper .item .recent_content {
     text-align: center;
     padding: 15px;
@@ -2759,177 +4209,248 @@ footer .sub_footer .container .right_sec p {
     border-top-right-radius: 0;
     background-color: rgba(0, 0, 0, 0.8);
   }
-  /* line 203, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 207, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .recent_auction_container .recent_slider_container .swiper-wrapper .item .recent_content h5 {
     font-size: 1.8rem;
     line-height: normal;
     color: #fff;
   }
-  /* line 208, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 212, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .recent_auction_container .recent_slider_container .swiper-wrapper .item .recent_content span {
     width: 100%;
     color: #fff;
   }
-  /* line 213, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 217, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .recent_auction_container .recent_slider_container .swiper-wrapper .item .recent_content a {
     position: static;
     margin-top: 15px;
     border-color: #fff;
     color: #fff;
   }
-  /* line 229, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 233, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .price_container .price_slider_container .swiper-wrapper .item h4 {
     font-size: 2.8rem;
   }
-  /* line 237, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 241, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .buy_sell_container {
     display: block;
   }
-  /* line 239, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 243, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .buy_sell_container::after {
     display: none;
   }
-  /* line 242, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 246, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .buy_sell_container .buy_content {
     width: 100%;
   }
-  /* line 244, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 248, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .buy_sell_container .buy_content img {
     min-height: 150px;
     object-fit: cover;
   }
-  /* line 249, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 253, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .buy_sell_container .buy_content .bug_sell_content h4 {
     font-size: 2.5rem;
   }
-  /* line 257, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 261, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .ourCollector_container .ourCollector_slider_container {
     padding-left: 30px;
   }
-  /* line 260, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 264, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .ourCollector_container .ourCollector_slider_container .swiper-wrapper .item {
     border-color: #272727;
   }
-  /* line 262, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 266, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .ourCollector_container .ourCollector_slider_container .swiper-wrapper .item .collectorProfile {
     opacity: 1;
   }
-  /* line 271, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 275, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_links {
     width: 30%;
   }
-  /* line 276, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 280, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_links .profile_links ul li a {
     font-size: 1.4rem;
     padding-left: 20px;
   }
-  /* line 284, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 288, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec {
     padding: 30px 15px;
   }
-  /* line 286, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 290, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec ul {
     width: 100%;
   }
-  /* line 289, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 293, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec ul.col-3 li {
     width: 48%;
   }
-  /* line 292, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 296, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec ul.col-3 li.user_gender label {
     margin-right: 20px;
   }
-  /* line 299, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 303, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec .bid_limit_box {
     width: 100%;
+  }
+  /* line 310, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .culture_container .culture_content {
+    display: block;
+  }
+  /* line 312, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .culture_container .culture_content .left_sec, .culture_container .culture_content .right_sec {
+    width: 100%;
+  }
+  /* line 315, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .culture_container .culture_content .right_sec, .culture_container .culture_content .culture_text {
+    margin-top: 30px;
+  }
+  /* line 322, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .values_container .values_cont {
+    display: block;
+  }
+  /* line 324, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .values_container .values_cont .left_sec, .values_container .values_cont .right_sec {
+    width: 100%;
+  }
+  /* line 326, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .values_container .values_cont .left_sec .value_content, .values_container .values_cont .right_sec .value_content {
+    margin-top: 20px;
+  }
+  /* line 328, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .values_container .values_cont .left_sec .value_content .global-pagination, .values_container .values_cont .right_sec .value_content .global-pagination {
+    position: static;
+    margin-top: 15px;
+  }
+  /* line 334, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .values_container .values_cont .right_sec {
+    margin-top: 30px;
   }
 }
 
 @media screen and (min-width: 641px) and (max-width: 1199px) {
-  /* line 309, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 345, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  body .global_heading h2::before {
+    left: -70px;
+  }
+  /* line 349, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .global_heading .auction_nav {
     display: flex !important;
     margin-right: 0;
     width: 15% !important;
   }
-  /* line 317, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 357, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .artist_category_container::after {
     left: 47.5;
   }
-  /* line 321, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 361, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .artist_category_container .artist_content .artist_info {
     display: block;
   }
-  /* line 323, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 363, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .artist_category_container .artist_content .artist_info .artist_image {
     width: 70%;
   }
-  /* line 326, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 366, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .artist_category_container .artist_content .artist_info .artist_info_content {
     width: 90%;
   }
-  /* line 335, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 375, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .subscribe_container .subscribe_content h4 {
     font-size: 2.5rem;
   }
-  /* line 338, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 378, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .subscribe_container .subscribe_content p, body .subscribe_container .subscribe_content form {
     width: 90%;
   }
-  /* line 345, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 385, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec .reg_form_sec {
     width: 700px;
     padding: 30px;
   }
-  /* line 350, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 390, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec .reg_form_sec form ul li {
     margin: 20px;
     width: 26%;
   }
+  /* line 402, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  body .management_container .management_team ul li {
+    width: 45%;
+    padding-top: 65px;
+  }
+  /* line 410, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  body .workenv_container {
+    padding-bottom: 50px;
+  }
+  /* line 412, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  body .workenv_container::after {
+    content: none;
+  }
+  /* line 418, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  body .heading_inner .global_heading {
+    width: 15%;
+  }
+  /* line 420, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  body .heading_inner .global_heading .auction_nav {
+    width: 100% !important;
+  }
+  /* line 432, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  body .employee_container .employee_cont .employee_slider .item .employeehead_cont .employee_name h4 {
+    font-size: 1.8rem;
+    line-height: 22px;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 364, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 448, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .auction_container .auction_way .auction_content {
     padding-bottom: 30px;
   }
-  /* line 366, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 450, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .auction_container .auction_way .auction_content p {
     width: 85%;
   }
 }
 
 @media only screen and (max-width: 1199px) {
-  /* line 379, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 463, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .highlight_slider_container .swiper-wrapper .item .highlight_button a {
     padding: 10px 24px;
     font-size: 1.2rem;
   }
-  /* line 385, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 469, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .highlight_slider_container .swiper-wrapper .item .highlight_bid h4 {
     font-size: 1.8rem;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  /* line 397, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 481, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .global_heading h2::before {
+    left: -140px;
+  }
+  /* line 489, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .global_heading .breadcrumb ul li a {
+    font-size: 1.2rem;
+  }
+  /* line 498, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .price_container .price_tabs ul {
     justify-content: flex-start;
   }
-  /* line 399, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 500, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .price_container .price_tabs ul li {
     margin: 0 15px;
   }
-  /* line 401, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 502, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .price_container .price_tabs ul li a {
     font-size: 1.4rem;
     text-align: center;
   }
-  /* line 410, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 511, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .artist_category_container {
     display: block;
   }
-  /* line 412, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 513, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .artist_category_container::after {
     width: 90%;
     height: 1px;
@@ -2938,98 +4459,98 @@ footer .sub_footer .container .right_sec p {
     margin: auto;
     top: 47%;
   }
-  /* line 420, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 521, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .artist_category_container .artist_content {
     width: 90%;
     margin: auto;
   }
-  /* line 423, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 524, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .artist_category_container .artist_content .artist_info {
     display: block;
   }
-  /* line 425, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 526, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .artist_category_container .artist_content .artist_info .artist_image, .artist_category_container .artist_content .artist_info .artist_info_content {
     width: 100%;
   }
-  /* line 429, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 530, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .artist_category_container .artist_content .artist_info .artist_info_content a {
     margin-top: 20px;
   }
-  /* line 436, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 537, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .artist_category_container .category_content {
     margin-top: 70px;
   }
-  /* line 440, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 541, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .artist_category_container .category_content .global_heading h2::before {
     left: -100px;
     right: auto;
   }
-  /* line 449, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 550, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .subscribe_container {
     padding: 50px 15px;
   }
-  /* line 451, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 552, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .subscribe_container .subscribe_content {
     width: 90%;
     margin: auto;
   }
-  /* line 454, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 555, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .subscribe_container .subscribe_content h4 {
     font-size: 2.5rem;
   }
-  /* line 457, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 558, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .subscribe_container .subscribe_content p {
     width: 100%;
   }
-  /* line 460, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 561, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .subscribe_container .subscribe_content form {
     width: 100%;
   }
-  /* line 462, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 563, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .subscribe_container .subscribe_content form ul {
     display: block;
   }
-  /* line 464, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 565, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .subscribe_container .subscribe_content form ul li {
     width: 100%;
     margin: 0;
     margin-bottom: 30px;
   }
-  /* line 468, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 569, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .subscribe_container .subscribe_content form ul li:last-child {
     text-align: center;
   }
-  /* line 477, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 578, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer {
     padding-top: 50px;
   }
-  /* line 479, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 580, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer {
     display: block;
     width: 90%;
     padding: 0 15px;
   }
-  /* line 483, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 584, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list {
     width: 100%;
     margin-bottom: 30px;
     border-bottom: 1px #272727 solid;
   }
-  /* line 487, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 588, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list:last-child {
     border-bottom: none;
   }
-  /* line 490, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 591, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list:last-child h5::after {
     content: none;
   }
-  /* line 495, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 596, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list h5 {
     padding-bottom: 15px;
     font-size: 1.6rem;
     position: relative;
   }
-  /* line 499, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 600, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list h5::after {
     content: "prev";
     font-family: swiper-icons;
@@ -3040,149 +4561,205 @@ footer .sub_footer .container .right_sec p {
     color: #272727;
     font-weight: bold;
   }
-  /* line 510, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 611, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list ul {
     display: none;
     margin-top: 10px;
     padding-bottom: 30px;
   }
-  /* line 516, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 617, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list .app_links {
     margin-top: 10px;
     display: flex;
     align-items: center;
   }
-  /* line 520, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 621, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list .app_links a {
     margin-bottom: 0;
   }
-  /* line 522, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 623, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list .app_links a img {
     width: 80%;
   }
-  /* line 528, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 629, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list .social_links {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  /* line 532, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 633, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list .social_links h5 {
     padding-bottom: 0;
     margin-right: 50px;
   }
-  /* line 536, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 637, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list .social_links a {
     margin-top: 0;
   }
-  /* line 538, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 639, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .main_footer .footer_list .social_links a:last-child {
     margin-right: 0;
   }
-  /* line 547, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 648, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .sub_footer .container {
     display: block;
   }
-  /* line 550, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 651, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .sub_footer .container .left_sec ul {
     justify-content: center;
   }
-  /* line 552, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 653, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .sub_footer .container .left_sec ul li {
     margin-right: 10px;
   }
-  /* line 554, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 655, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .sub_footer .container .left_sec ul li a {
     text-align: center;
   }
-  /* line 560, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 661, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .sub_footer .container .right_sec {
     margin-top: 20px;
   }
-  /* line 562, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 663, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   footer .sub_footer .container .right_sec p {
     text-align: center;
   }
-  /* line 571, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 672, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec {
     width: 100%;
   }
-  /* line 573, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 674, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec .closeBtn {
     right: 0;
   }
-  /* line 576, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 677, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec h3 {
     font-size: 2.5rem;
   }
-  /* line 579, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 680, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec form {
     margin-top: 20px;
   }
-  /* line 582, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 683, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec .login_form_sec, body .login_reg_sec .reg_form_sec {
     width: 90%;
     margin: auto;
     padding: 25px;
   }
-  /* line 588, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 689, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec .reg_form_sec ul {
     display: block;
   }
-  /* line 590, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 691, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   body .login_reg_sec .reg_form_sec ul li {
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
   }
-  /* line 600, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 701, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container {
     display: block;
   }
-  /* line 603, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 704, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_links {
     width: 100%;
     padding: 30px 0;
   }
-  /* line 608, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 709, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec {
     width: 100%;
     padding: 30px 20px;
   }
-  /* line 611, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 712, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec ul {
     width: 100%;
   }
-  /* line 614, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 715, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec ul.col-6 li, .dashboard_container .dashboard_sec ul.col-3 li {
     width: 100%;
   }
-  /* line 620, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 721, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec .user_info ul {
     display: block;
   }
-  /* line 622, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 723, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec .user_info ul li {
     width: 100%;
     margin-bottom: 0px;
     padding: 20px 0;
   }
-  /* line 627, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 728, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec .user_info ul li.user_interested span {
     position: static;
     margin-top: 5px;
   }
-  /* line 635, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 736, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec .bid_limit_box {
     width: 100%;
   }
-  /* line 638, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 739, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec .bid_limit_box ul li {
     margin-bottom: 20px;
   }
-  /* line 640, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  /* line 741, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
   .dashboard_container .dashboard_sec .bid_limit_box ul li:last-child {
     margin-bottom: 0;
+  }
+  /* line 751, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .who_banner img {
+    min-height: 350px;
+    object-fit: cover;
+    margin-bottom: 0;
+  }
+  /* line 757, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .who_banner .heading_inner {
+    margin-top: 30px;
+  }
+  /* line 766, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .culture_container .culture_content .left_sec .global_heading .auction_nav {
+    width: 30%;
+    display: flex;
+  }
+  /* line 776, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .management_container .management_team {
+    margin-top: 20px;
+  }
+  /* line 779, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .management_container .management_team ul li {
+    width: 100%;
+    padding-top: 70px;
+    margin-bottom: 50px;
+  }
+  /* line 789, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .workenv_container .container_inner {
+    display: block;
+  }
+  /* line 791, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .workenv_container .container_inner .left_sec, .workenv_container .container_inner .right_sec {
+    width: 100%;
+  }
+  /* line 794, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .workenv_container .container_inner .right_sec {
+    margin-top: 30px;
+  }
+  /* line 803, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .employee_container .employee_cont .employee_slider .item {
+    padding: 15px;
+  }
+  /* line 805, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .employee_container .employee_cont .employee_slider .item .employeehead_cont {
+    display: block;
+  }
+  /* line 807, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .employee_container .employee_cont .employee_slider .item .employeehead_cont .employee_name {
+    margin-left: 0;
+    text-align: center;
+  }
+  /* line 810, D:/Asthaguru/27th Aug/AG/scss/base/_media.scss */
+  .employee_container .employee_cont .employee_slider .item .employeehead_cont .employee_name h4 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    line-height: 22px;
   }
 }
 

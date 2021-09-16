@@ -12,12 +12,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from './helpers/jwt-interceptor';
 import { RegistrationComponent } from './components/registration/registration.c';
 import { UserProfileComponent } from './components/user-profile/user-profile.c';
+import { CareersComponent } from './components/careers/careers.c';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,
