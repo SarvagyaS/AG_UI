@@ -4,24 +4,24 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({ templateUrl: './user-profile.t.html' })
 
-export class UserProfileComponent implements OnInit{
+export class UserProfileComponent implements OnInit {
 
     userDetails: UserDetails;
 
     constructor(
         private _router: Router,
     ) {
-            
+
     }
 
     ngOnInit() {
         var u = localStorage.getItem('currentUser');
-        if(u){
+        if (u) {
             this.userDetails = JSON.parse(u) as UserDetails;
         }
-        else{
+        else {
             this._router.navigate(['login']);
         }
     }
-    
+
 }

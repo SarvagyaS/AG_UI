@@ -13,13 +13,15 @@ import { JwtInterceptor } from './helpers/jwt-interceptor';
 import { RegistrationComponent } from './components/registration/registration.c';
 import { UserProfileComponent } from './components/user-profile/user-profile.c';
 import { CareersComponent } from './components/careers/careers.c';
+import { WhoWeAreComponent } from './components/who-we-are/who-we-are.c';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     UserProfileComponent,
-    CareersComponent
+    CareersComponent,
+    WhoWeAreComponent
   ],
   imports: [
     BrowserModule,

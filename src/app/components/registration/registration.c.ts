@@ -87,7 +87,7 @@ export class RegistrationComponent implements OnInit {
       this.loginService.authenticate(this.l.username.value,this.l.password.value).subscribe(z=>{
         if(z.id > 0){
             if(!z.is_profile_update){
-                this._router.navigate(['user_profile']);
+                this._router.navigate(['user-profile']);
             }
             else{
                 alert("Your profile is filled.");
