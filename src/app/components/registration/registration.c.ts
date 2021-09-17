@@ -98,4 +98,12 @@ export class RegistrationComponent implements OnInit {
         }
       })
     }
+
+    forgotPassword(){
+      if(!this.l.username.value){
+        alert("Please enter username.");
+      }else{
+        alert("Passowrd reset link has been sent to your registered email.");
+      }
+    }
 }

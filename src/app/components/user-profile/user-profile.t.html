@@ -3,7 +3,7 @@
        <div class="dashboard_links">
           <div class="profile_info">
              <img src="./assets/images/flcw1zpe.png" alt="Profile Photo" title="Profile Photo"/>
-             <h5>Tushar Sethi</h5>
+             <h5>{{userDetails.first_name}} {{userDetails.last_name}}</h5>
              <div class="profile_progressbar"><span></span></div>
              <span>20% Complete</span>
           </div>
@@ -780,8 +780,8 @@
                    <div class="user_info">
                       <ul class="col-3">
                          <li class="user_name">
-                            <p>Tushar Sethi</p>
-                            <span>tushar.sethi@astaguru.com</span>
+                            <p>{{userDetails.first_name}} {{userDetails.last_name}}</p>
+                            <span>{{userDetails.email}}</span>
                          </li>
  
                          <li class="user_gender">
@@ -959,7 +959,7 @@
  
                          <li class="user_password">
                             <div class="password_sec">
-                               <input type="password" value="dummypass" readonly>
+                               <input type="password" [value]="userDetails.password" readonly>
                                <a href="javascript:;">
                                   <img src="./assets/images/showpassword.png" alt="Show Password">
                                </a>
@@ -970,13 +970,13 @@
  
                          <li>
                             <div class="custom_input">
-                               <input type="text" placeholder="Phone Number">
+                               <input type="text" [value]="userDetails.mobile" placeholder="Phone Number">
                             </div>
                          </li>
  
                          <li>
                             <div class="custom_input">
-                               <input type="text" placeholder="Your Nickname">
+                               <input type="text" [value]="userDetails.nick_name" placeholder="Your Nickname">
                             </div>
                          </li>
  
@@ -1052,128 +1052,128 @@
                 </div>
  
                 <div class="postal_sec">
-                   <h3>My Postal Address</h3>
- 
-                   <form>
-                      <ul class="col-6">
-                         <li>
-                            <div class="custom_input">
-                               <input type="text" placeholder="Address Line 1">
-                            </div>
-                         </li>
- 
-                         <li>
-                            <div class="custom_input">
-                               <input type="text" placeholder="Address Line 2">
-                            </div>
-                         </li>
- 
-                         <li>
-                            <div class="custom_input contry_sec">
-                               <select class="custom_select">
-                                  <option>Country</option>
-                                  <option>India</option>
-                                  <option>USA</option>
-                                  <option>australia</option>
-                               </select>
- 
-                               <select class="custom_select">
-                                  <option>City</option>
-                                  <option>Mumbai</option>
-                                  <option>Delhi</option>
-                               </select>
-                            </div>
-                         </li>
- 
-                         <li>
-                            <div class="custom_input contry_sec">
-                               <select class="custom_select">
-                                  <option>State / Province</option>
-                                  <option>India</option>
-                                  <option>USA</option>
-                                  <option>australia</option>
-                               </select>
- 
-                               <input type="text" placeholder="Postal Code"/>
-                            </div>
-                         </li>
-                      </ul>
- 
-                      <div class="submit_btn">
-                         <input type="submit" value="Save" class="btn btn-yellow"/>
-                      </div>
- 
-                      <div class="billing_add custom_check_cont">
-                         <label class="custom_checkbox">
-                            My billing address is different than my postal address
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                         </label>
-                      </div>
-                   </form>
-                </div>
- 
-                <div class="biling_sec">
-                   <h3>My Billing Address</h3>
- 
-                   <form>
-                      <ul class="col-6">
-                         <li>
-                            <div class="custom_input">
-                               <input type="text" placeholder="Your Name">
-                            </div>
-                         </li>
-                      </ul>
- 
-                      <ul class="col-6">                     
-                         <li>
-                            <div class="custom_input">
-                               <input type="text" placeholder="Address Line 1">
-                            </div>
-                         </li>
- 
-                         <li>
-                            <div class="custom_input">
-                               <input type="text" placeholder="Address Line 2">
-                            </div>
-                         </li>
- 
-                         <li>
-                            <div class="custom_input contry_sec">
-                               <select class="custom_select">
-                                  <option>Country</option>
-                                  <option>India</option>
-                                  <option>USA</option>
-                                  <option>australia</option>
-                               </select>
- 
-                               <select class="custom_select">
-                                  <option>City</option>
-                                  <option>Mumbai</option>
-                                  <option>Delhi</option>
-                               </select>
-                            </div>
-                         </li>
- 
-                         <li>
-                            <div class="custom_input contry_sec">
-                               <select class="custom_select">
-                                  <option>State / Province</option>
-                                  <option>India</option>
-                                  <option>USA</option>
-                                  <option>australia</option>
-                               </select>
- 
-                               <input type="text" placeholder="Postal Code"/>
-                            </div>
-                         </li>
-                      </ul>
- 
-                      <div class="submit_btn">
-                         <input type="submit" value="Save" class="btn btn-yellow"/>
-                      </div>                  
-                   </form>
-                </div>
+                    <h3>My Postal Address</h3>
+                
+                    <form>
+                       <ul class="col-6">
+                          <li>
+                             <div class="custom_input">
+                                <input type="text" [(ngModel)]="postalAddress.address_line_1" placeholder="Address Line 1" name="pad1">
+                             </div>
+                          </li>
+                
+                          <li>
+                             <div class="custom_input">
+                                <input type="text" [(ngModel)]="postalAddress.address_line_2" placeholder="Address Line 2" name="pad2">
+                             </div>
+                          </li>
+                
+                          <li>
+                             <div class="custom_input contry_sec">
+                                <select class="custom_select" [(ngModel)]="postalAddress.country" name="pc1">
+                                   <option>Country</option>
+                                   <option>India</option>
+                                   <option>USA</option>
+                                   <option>australia</option>
+                                </select>
+                
+                                <select class="custom_select" [(ngModel)]="postalAddress.city" name="pc2">
+                                   <option>City</option>
+                                   <option>Mumbai</option>
+                                   <option>Delhi</option>
+                                </select>
+                             </div>
+                          </li>
+                
+                          <li>
+                             <div class="custom_input contry_sec">
+                                <select class="custom_select" [(ngModel)]="postalAddress.state" name="pad3">
+                                   <option>State / Province</option>
+                                   <option>India</option>
+                                   <option>USA</option>
+                                   <option>australia</option>
+                                </select>
+                
+                                <input type="text" placeholder="Postal Code"  [(ngModel)]="postalAddress.postal_code" name="pad99"/>
+                             </div>
+                          </li>
+                       </ul>
+                
+                       <div class="submit_btn">
+                          <input type="submit" value="Save" class="btn btn-yellow" (click)="saveUserAdd(true)"/>
+                       </div>
+                
+                       <div class="billing_add custom_check_cont">
+                          <label class="custom_checkbox">
+                             My billing address is different than my postal address
+                             <input type="checkbox" [(ngModel)]="billingAddress.is_same_as_postal_add" (change)="billIsSameAsPost()" name="pad987">
+                             <span class="checkmark"></span>
+                          </label>
+                       </div>
+                    </form>
+                 </div>
+                
+                 <div class="biling_sec">
+                    <h3>My Billing Address</h3>
+                
+                    <form>
+                       <ul class="col-6">
+                          <li>
+                             <div class="custom_input">
+                                <input type="text"  [(ngModel)]="billingAddress.name"  placeholder="Your Name" name="bad1">
+                             </div>
+                          </li>
+                       </ul>
+                
+                       <ul class="col-6">                     
+                          <li>
+                             <div class="custom_input">
+                                <input type="text" [(ngModel)]="billingAddress.address_line_1" placeholder="Address Line 1" name="bad2">
+                             </div>
+                          </li>
+                
+                          <li>
+                             <div class="custom_input">
+                                <input type="text" [(ngModel)]="billingAddress.address_line_2" placeholder="Address Line 2" name="bad3">
+                             </div>
+                          </li>
+                
+                          <li>
+                             <div class="custom_input contry_sec">
+                                <select class="custom_select" [(ngModel)]="billingAddress.country" name="bad4">
+                                   <option>Country</option>
+                                   <option>India</option>
+                                   <option>USA</option>
+                                   <option>australia</option>
+                                </select>
+                
+                                <select class="custom_select" [(ngModel)]="billingAddress.city" name="bad5">
+                                   <option>City</option>
+                                   <option>Mumbai</option>
+                                   <option>Delhi</option>
+                                </select>
+                             </div>
+                          </li>
+                
+                          <li>
+                             <div class="custom_input contry_sec">
+                                <select class="custom_select" [(ngModel)]="billingAddress.state" name="bad6">
+                                   <option>State / Province</option>
+                                   <option>India</option>
+                                   <option>USA</option>
+                                   <option>australia</option>
+                                </select>
+                
+                                <input type="text" placeholder="Postal Code"  [(ngModel)]="billingAddress.postal_code" name="bad7"/>
+                             </div>
+                          </li>
+                       </ul>
+                
+                       <div class="submit_btn">
+                          <input type="submit" value="Save" class="btn btn-yellow"  (click)="saveUserAdd(false)"/>
+                       </div>                  
+                    </form>
+                 </div>
  
                 <div class="bank_sec">
                    <h3>Bank Details</h3>

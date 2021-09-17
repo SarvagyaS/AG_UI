@@ -1,7 +1,10 @@
+import { UserAddressDetails } from "./user-address-details";
+
 export interface UserDetails {
     id: number,
     first_name: string,
     last_name: string,
+    nick_name: string,
     email: string,
     country_code: string,
     mobile: string,
@@ -22,5 +25,8 @@ export interface UserDetails {
     user_ip: string,
     is_active: boolean,
     token: string,
-    user_agent: string
+    user_agent: string,
+
+    //NotMapped
+    userAddressDetails: UserAddressDetails[]
 }
