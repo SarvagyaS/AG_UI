@@ -24,18 +24,22 @@ export class UserProfileComponent implements OnInit {
     }
 
     ngOnInit() {
-        if(this.userDetails.userAddressDetails){
+        if(this.userDetails){
             this.mapAddress();
         }
     }
 
     mapAddress(){
-        if(this.userDetails.userAddressDetails.find(x=>x.is_billing_address == false)){
-            this.postalAddress = this.userDetails.userAddressDetails.find(x=>x.is_billing_address == false);
-        }
-        if(this.userDetails.userAddressDetails.find(x=>x.is_billing_address == true)){
-            this.billingAddress = this.userDetails.userAddressDetails.find(x=>x.is_billing_address == true);
-        }
+        this.userService.getUserAddress(this.userDetails.id).subscribe(a => {
+            if(a.isSuccess && a.data && a.data.length > 0){
+                if(a.data.find(x=>x.is_billing_address == false)){
+                    this.postalAddress = a.data.find(x=>x.is_billing_address == false);
+                }
+                if(a.data.find(x=>x.is_billing_address == true)){
+                    this.billingAddress = a.data.find(x=>x.is_billing_address == true);
+                }
+            }
+        });
     }
 
     saveUserAdd(fromPostal: boolean){
@@ -49,19 +53,21 @@ export class UserProfileComponent implements OnInit {
         }
         ud.userDetailsId = this.userDetails.id;
         this.userService.saveAddressDetails(ud).subscribe((a)=>{
-            if (a.id > 0) {
+            if (a.isSuccess && a.data && a.data.id > 0){
+                this.mapAddress();
                 alert("Add Updated.");
-            }else{
+            }
+            else{
                 alert("Something went wrong.");
             }
         }, (e)=>{
-
+            alert("Something went wrong.");
         });
     }
 
     billIsSameAsPost(){
         if(this.billingAddress.is_same_as_postal_add){
-            this.billingAddress = this.postalAddress;
+            this.billingAddress = JSON.parse(JSON.stringify(this.postalAddress));
             this.billingAddress.id = 0;
             this.billingAddress.is_billing_address = true;
             this.billingAddress.is_same_as_postal_add = true;

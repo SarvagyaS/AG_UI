@@ -65,12 +65,16 @@ export class RegistrationComponent implements OnInit {
       this.userService.register(this.registerForm.value)
         .subscribe(
           d => {
-            if (d.id > 0) {
+            if (d.isSuccess && d.data && d.data.id > 0){
               alert("Registered");
               this.registerModal = false;
             }
+            else{
+              alert("Not Registered");
+            }
           },
           error => {
+            alert("Not Registered");
             this.loading = false;
           });
     }
