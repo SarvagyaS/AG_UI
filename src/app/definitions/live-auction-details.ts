@@ -1,5 +1,5 @@
 export interface LiveAuctionDetails {
-    productId: number,
-    userId: number,
+    productId: string,
+    userId: string,
     price: string
 }

@@ -28,11 +28,12 @@ export class RegistrationComponent implements OnInit {
         Id: [0],
         first_name: ['', Validators.required],
         last_name: ['', Validators.required],
-        email: ['', Validators.required],
-        mobile: ['', [Validators.required]],
+        email: ['', [Validators.required, Validators.email]],
+        mobile: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10),Validators.pattern("^[0-9]*$")]],
         user_agent: [''],
         password: ['', [Validators.required, Validators.minLength(6)]],
-        confirm_password: ['']
+        confirm_password: [''],
+        otp: ['',[Validators.required]],
       }, { validator: this.checkIfMatchingPasswords('password', 'confirm_password') });
   
       this.loginForm = this.formBuilder.group({

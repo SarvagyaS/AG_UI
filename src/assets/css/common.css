@@ -893,6 +893,22 @@ header .main_header .container .hamburger:hover span {
 }
 
 /* line 15, D:/Asthaguru/27th Aug/AG/scss/base/_login-reg.scss */
+
+.form-group{
+  position: relative;
+}
+
+.form-group .error_sec{
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+}
+
+.form-group .error_sec div{
+  color: red;
+}
+
 .login_reg_sec .reg_form_sec {
   display: none;
   width: 900px;

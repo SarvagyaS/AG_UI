@@ -1238,7 +1238,7 @@
                             <label for="first_name">First Name</label>
                             <input type="text" formControlName="first_name" class="form-control"
                                 [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }" />
-                            <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                            <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback error_sec">
                                 <div *ngIf="f.first_name.errors.required">First Name is required</div>
                             </div>
                         </div>
@@ -1249,7 +1249,7 @@
                             <label for="last_name">Last Name</label>
                             <input type="text" formControlName="last_name" class="form-control"
                                 [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }" />
-                            <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                            <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback error_sec">
                                 <div *ngIf="f.last_name.errors.required">Last Name is required</div>
                             </div>
                         </div>
@@ -1260,8 +1260,9 @@
                             <label for="email">Email</label>
                             <input type="text" formControlName="email" class="form-control"
                                 [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback error_sec">
                                 <div *ngIf="f.email.errors.required">email is required</div>
+                                <div *ngIf="f.email.errors.email">not a correct format</div>
                             </div>
                         </div>
                     </li>
@@ -1271,7 +1272,7 @@
                             <label for="password">Password</label>
                             <input type="password" formControlName="password" class="form-control"
                                 [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback error_sec">
                                 <div *ngIf="f.password.errors.required">Password is required</div>
                                 <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
                             </div>
@@ -1283,7 +1284,7 @@
                             <label for="confirm_password">Confirm Password</label>
                             <input type="confirm_password" formControlName="confirm_password" class="form-control"
                                 [ngClass]="{ 'is-invalid': submitted && f.confirm_password.errors }" />
-                            <div *ngIf="submitted && f.confirm_password.errors" class="invalid-feedback">
+                            <div *ngIf="submitted && f.confirm_password.errors" class="invalid-feedback error_sec">
                                 Passwords dont match
                             </div>
                         </div>
@@ -1294,6 +1295,23 @@
                         <div class="form-group">
                             <label for="mobile">Mobile</label>
                             <input type="text" formControlName="mobile" class="form-control" />
+                            <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback error_sec">
+                                <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+                                <div *ngIf="f.mobile.errors.minlength">Mobile must be at least 10 digits</div>
+                                <div *ngIf="f.mobile.errors.maxlength">Mobile must be at least 10 digits</div>
+                                <div *ngIf="f.mobile.errors.pattern">Mobile must be only numbers</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    
+                    <li>
+                        <div class="form-group">
+                            <label for="otp">OTP</label>
+                            <input type="text" formControlName="otp" class="form-control" />
+                            <div *ngIf="submitted && f.otp.errors" class="invalid-feedback error_sec">
+                                <div *ngIf="f.otp.errors.required">OTP is required</div>
+                            </div>
                         </div>
                     </li>
 

@@ -1,0 +1,86 @@
+<br/>
+<br/><br/>
+<br/>
+
+<h1 class="text-center" style="margin-left: 100px">Live Auction</h1>
+<br/>
+<br/>
+
+
+
+
+<br/>
+<br/>
+
+
+<br/>
+<br/><br/>
+<br/>
+
+
+
+<div class="highlight_slider_container" style="margin-left: 100px">
+    <div class="highlight_slider">
+        <div class="swiper-wrapper">
+            <div class="item swiper-slide">
+                <div class="highlight_tools">
+                    <div class="highlight_3d">
+                        <a href="javascript:;">
+                            <img src="./assets/images/3d.svg" alt="3d" />
+                            <span>3D</span>
+                        </a>
+                    </div>
+
+                    <div class="highlight_like">
+                        <a href="javascript:;">
+                            <img src="./assets/images/like.svg" alt="Like" />
+                        </a>
+
+                        <a href="javascript:;">
+                            <img src="./assets/images/expand.svg" alt="Expand" />
+                        </a>
+                    </div>
+                </div>
+
+                <img src="./assets/images/coll-jun21-3o.png" alt="highlight" title="highlight" />
+
+                <div class="highlight_detail">
+                    <div class="highlight_name">
+                        <h4>Jamini Roy</h4>
+                        <span>Mother & Child</span>
+                    </div>
+
+                    <div class="highlight_lot">
+                        <span>
+                            Lot 10
+                        </span>
+                    </div>
+                </div>
+
+                <div class="highlight_bid">
+                    <div class="current_bid" *ngIf="msgInboxArray && msgInboxArray.length > 0">
+                        <span>Current Bid</span>
+                        <h4 *ngFor ="let item of msgInboxArray">&#8377; {{item.price}} by {{item.userId}}</h4>
+                    </div>
+
+                    <!-- <div class="valid_bid">
+                        <span>Next Valid Bid</span>
+                        <h4>&#8377; 55,000</h4>
+                    </div> -->
+                </div>
+
+                <div class="highlight_button">
+                    <div class="buy_btn">
+                        <input type="text" placeholder="Place your bid amt here" [(ngModel)]="auction.price" />
+                    </div>
+
+                    <div class="proxy_btn">
+                        <button class="btn" type="button" (click)="placeBid()">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

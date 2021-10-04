@@ -14,6 +14,7 @@ import { RegistrationComponent } from './components/registration/registration.c'
 import { UserProfileComponent } from './components/user-profile/user-profile.c';
 import { CareersComponent } from './components/careers/careers.c';
 import { WhoWeAreComponent } from './components/who-we-are/who-we-are.c';
+import { LiveAuctionComponent } from './components/live-auction/live-auction.c';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { WhoWeAreComponent } from './components/who-we-are/who-we-are.c';
     RegistrationComponent,
     UserProfileComponent,
     CareersComponent,
-    WhoWeAreComponent
+    WhoWeAreComponent,
+    LiveAuctionComponent
   ],
   imports: [
     BrowserModule,

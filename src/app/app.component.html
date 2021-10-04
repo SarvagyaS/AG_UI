@@ -87,7 +87,8 @@
             <div class="login_sec">
                 <a *ngIf="!userDetails" href="javascript:;" class="btn btn-yellow login_btn">Login / Register</a>
                 <!-- <span *ngIf="userDetails && userDetails.id > 0">Hi ! {{userDetails.first_name}}</span> -->
-                <span *ngIf="userDetails && userDetails.id > 0" (click)="logout()" class="btn btn-yellow login_btn">Log out</span>
+                <span *ngIf="userDetails && userDetails.id > 0" (click)="logout()" class="btn btn-yellow login_btn">Log
+                    out</span>
 
                 <a href="javascript:;" class="login_icon_btn">
                     <img src="./assets/images/login.png" alt="Login" />

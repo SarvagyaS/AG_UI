@@ -79,11 +79,11 @@ $(document).ready(function() {
     /*---Video Section ends---*/
 
     /*---Login Button starts---*/
-        $('.login_btn, .login_icon_btn').click(function(e) {
+        $(document).on('click', '.login_btn, .login_icon_btn', function(e){
             $('.overlay, .login_reg_sec').fadeIn('show');
             $("body").addClass("overflow-hide");
             e.stopPropagation();
-        });
+        });        
 
         $('.login_reg_sec .closeBtn').click(function() {
             $('.overlay, .login_reg_sec').fadeOut('show');
