@@ -1,4 +1,3 @@
-
 <main>
     <section class="banner_sec">
         <img src="./assets/images/banner.PNG" alt="banner" />
@@ -1178,6 +1177,196 @@
         </div>
     </section>
 
+
+
+
+    <section class="login_reg_sec">
+        <div class="login_form_sec">
+           <button class="closeBtn">X</button>
+           <h3>Login</h3>
+           <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+              <ul>
+                 <li>
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" formControlName="fullName" class="form-control"
+                            [ngClass]="{ 'is-invalid': loginSubmitted && l.fullName.errors }" />
+                        <div *ngIf="loginSubmitted && l.fullName.errors" class="invalid-feedback">
+                            <div *ngIf="l.fullName.errors.required">Full Name is required</div>
+                        </div>
+                    </div>
+                 </li>
+
+                 <li>
+                    <div class="form-group">
+                        <input type="mobile" placeholder="Phone Number" formControlName="mobile" class="form-control"
+                            [ngClass]="{ 'is-invalid': loginSubmitted && l.mobile.errors }" />
+                        <div *ngIf="loginSubmitted && l.mobile.errors" class="invalid-feedback">
+                            <div *ngIf="l.mobile.errors.required">Mobile is required</div>
+                        </div>
+                    </div>
+                 </li>
+
+                 <li>
+                    <div class="form-group">
+                        <input type="number" placeholder="Enter OTP" formControlName="otp" class="form-control"
+                            [ngClass]="{ 'is-invalid': loginSubmitted && l.otp.errors }" />
+                        <div *ngIf="loginSubmitted && l.otp.errors" class="invalid-feedback">
+                            <div *ngIf="l.otp.errors.required">OTP is required</div>
+                        </div>
+                    </div>
+                 </li>
+
+                 <li>
+                    <div class="form-group">
+                        <button class="btn btn-yellow">
+                            Submit
+                        </button>
+                    </div>
+                 </li>
+              </ul>
+           </form>
+
+           <div class="create_acc">
+              <a href="javascript:;" class="create_acc_btn">Create New Account</a>
+           </div>            
+        </div>
+
+        <div class="reg_form_sec">
+           <button class="closeBtn">X</button>
+           <h3>Register</h3>
+           <form [formGroup]="registerForm" (ngSubmit)="onRegistrationSubmit()">
+            <ul>
+                <li>
+                    <div class="form-group">
+                        <input type="text" placeholder="First Name" formControlName="first_name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }" />
+                        <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback error_sec">
+                            <div *ngIf="f.first_name.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="form-group">                        
+                        <input type="text" placeholder="Last Name" formControlName="last_name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }" />
+                        <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback error_sec">
+                            <div *ngIf="f.last_name.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="form-group">
+                        <input type="text" placeholder="Email Id" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback error_sec">
+                            <div *ngIf="f.email.errors.required">email is required</div>
+                            <div *ngIf="f.email.errors.email">not a correct format</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="form-group password_sec">
+                        <input type="password" placeholder="Enter Password" formControlName="password" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <a href="javascript:;"><img src="../../../assets/images/showpassword.png" alt="Show Password" title="Show Password"></a>
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback error_sec">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="form-group password_sec">
+                        <input type="password" placeholder="Confirm Password" formControlName="confirm_password" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.confirm_password.errors }" />
+                            <a href="javascript:;"><img src="../../../assets/images/showpassword.png" alt="Show Password" title="Show Password"></a>
+                        <div *ngIf="submitted && f.confirm_password.errors" class="invalid-feedback error_sec">
+                            Passwords dont match
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="form-group">
+                        <input type="text" placeholder="Phone Number" formControlName="mobile" class="form-control" />
+                        <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback error_sec">
+                            <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+                            <div *ngIf="f.mobile.errors.minlength">Mobile must be at least 10 digits</div>
+                            <div *ngIf="f.mobile.errors.maxlength">Mobile must be at least 10 digits</div>
+                            <div *ngIf="f.mobile.errors.pattern">Mobile must be only numbers</div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="form-group">
+                        <input type="number" placeholder="OTP" formControlName="otp" class="form-control" />
+                        <div *ngIf="submitted && f.otp.errors" class="invalid-feedback error_sec">
+                            <div *ngIf="f.otp.errors.required">OTP is required</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="form-group">
+                        <button [disabled]="loading" class="btn btn-primary">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Next
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </form>
+
+           <div class="create_acc">
+              <a href="javascript:;" class="user_acc_btn">Already a User? Login</a>
+           </div>            
+        </div>
+     </section>
+
+     <div class="overlay"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
     <section class="login_reg_sec">
         <div class="login_form_sec">
             <button class="closeBtn">X</button>
@@ -1231,106 +1420,13 @@
             <button class="closeBtn">X</button>
             <h3>Register</h3>
 
-            <form [formGroup]="registerForm" (ngSubmit)="onRegistrationSubmit()">
-                <ul>
-                    <li>
-                        <div class="form-group">
-                            <label for="first_name">First Name</label>
-                            <input type="text" formControlName="first_name" class="form-control"
-                                [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }" />
-                            <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback error_sec">
-                                <div *ngIf="f.first_name.errors.required">First Name is required</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="form-group">
-                            <label for="last_name">Last Name</label>
-                            <input type="text" formControlName="last_name" class="form-control"
-                                [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }" />
-                            <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback error_sec">
-                                <div *ngIf="f.last_name.errors.required">Last Name is required</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" formControlName="email" class="form-control"
-                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback error_sec">
-                                <div *ngIf="f.email.errors.required">email is required</div>
-                                <div *ngIf="f.email.errors.email">not a correct format</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="password_sec">
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" formControlName="password" class="form-control"
-                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback error_sec">
-                                <div *ngIf="f.password.errors.required">Password is required</div>
-                                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="password_sec">
-                        <div class="form-group">
-                            <label for="confirm_password">Confirm Password</label>
-                            <input type="confirm_password" formControlName="confirm_password" class="form-control"
-                                [ngClass]="{ 'is-invalid': submitted && f.confirm_password.errors }" />
-                            <div *ngIf="submitted && f.confirm_password.errors" class="invalid-feedback error_sec">
-                                Passwords dont match
-                            </div>
-                        </div>
-                
-                    </li>
-
-                    <li>
-                        <div class="form-group">
-                            <label for="mobile">Mobile</label>
-                            <input type="text" formControlName="mobile" class="form-control" />
-                            <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback error_sec">
-                                <div *ngIf="f.mobile.errors.required">Mobile is required</div>
-                                <div *ngIf="f.mobile.errors.minlength">Mobile must be at least 10 digits</div>
-                                <div *ngIf="f.mobile.errors.maxlength">Mobile must be at least 10 digits</div>
-                                <div *ngIf="f.mobile.errors.pattern">Mobile must be only numbers</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    
-                    <li>
-                        <div class="form-group">
-                            <label for="otp">OTP</label>
-                            <input type="text" formControlName="otp" class="form-control" />
-                            <div *ngIf="submitted && f.otp.errors" class="invalid-feedback error_sec">
-                                <div *ngIf="f.otp.errors.required">OTP is required</div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="form-group">
-                            <button [disabled]="loading" class="btn btn-primary">
-                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-                                Register
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-            </form>
+            
 
             <div class="create_acc">
                 <a href="javascript:;" class="user_acc_btn">Already a User? Login</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <div class="overlay"></div>
 </main>

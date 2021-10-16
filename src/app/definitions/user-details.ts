@@ -26,6 +26,15 @@ export interface UserDetails {
     is_active: boolean,
     token: string,
     user_agent: string,
+    bank_name: string,
+    account_num: string,
+    ifsc_code: string,
+    pan_card: string,
+    aadhar_card: string,
+    birthDay: number;
+    birthMonth: number;
+    birthYear: number;
+
 
     //NotMapped
     userAddressDetails: UserAddressDetails[]

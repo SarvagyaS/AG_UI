@@ -26,4 +26,17 @@ export class UserService {
     public saveAddressDetails(ud: UserAddressDetails): Observable<ApiResponse<UserAddressDetails>> {
         return this.apiService.post(this.prefix + '/SaveAddressDetails', null, ud);
     }
+
+    public savePersonalDetails(ud: UserDetails): Observable<ApiResponse<UserDetails>> {
+        return this.apiService.post(this.prefix + '/SavePersonalDetails', null, ud);
+    }
+
+    public saveBankDetails(ud: UserDetails): Observable<ApiResponse<UserDetails>> {
+        return this.apiService.post(this.prefix + '/SaveBankDetails', null, ud);
+    }
+
+    public getUserDetails(id: number): Observable<ApiResponse<UserDetails>> {
+        return this.apiService.get(this.prefix + '/GetUserDetails?Id=' + id, null);
+    }
+
 }

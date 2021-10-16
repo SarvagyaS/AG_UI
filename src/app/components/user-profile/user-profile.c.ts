@@ -12,6 +12,7 @@ export class UserProfileComponent implements OnInit {
     userDetails: UserDetails;
     postalAddress: UserAddressDetails = {} as UserAddressDetails;
     billingAddress: UserAddressDetails = {} as UserAddressDetails;
+    additionalPostalAddress: UserAddressDetails[] = [];
 
     constructor(
         private _router: Router,
@@ -25,8 +26,17 @@ export class UserProfileComponent implements OnInit {
 
     ngOnInit() {
         if(this.userDetails){
+            this.getUserDetails();
             this.mapAddress();
         }
+    }
+
+    getUserDetails(){
+        this.userService.getUserDetails(this.userDetails.id).subscribe(a=>{
+            if (a.isSuccess && a.data && a.data.id > 0) {
+                this.userDetails = a.data;
+            }
+        })
     }
 
     mapAddress(){
@@ -42,20 +52,35 @@ export class UserProfileComponent implements OnInit {
         });
     }
 
-    saveUserAdd(fromPostal: boolean){
+    saveUserAdd(){
         var ud: UserAddressDetails;
-        if(fromPostal){
-            ud = this.postalAddress;
-            ud.is_billing_address = false;
-            ud.is_same_as_postal_add = false;
-        }else{
-            ud = this.billingAddress;
-        }
-        ud.userDetailsId = this.userDetails.id;
-        this.userService.saveAddressDetails(ud).subscribe((a)=>{
+        // if(fromPostal){
+        //     ud = this.postalAddress;
+        //     ud.is_billing_address = false;
+        //     ud.is_same_as_postal_add = false;
+        // }else{
+        //     ud = this.billingAddress;
+        // }
+        this.postalAddress.userDetailsId = this.userDetails.id;
+        this.billingAddress.userDetailsId = this.userDetails.id;
+
+        this.postalAddress.is_billing_address = false;
+        this.postalAddress.is_same_as_postal_add = false;
+        this.userService.saveAddressDetails(this.postalAddress).subscribe((a)=>{
             if (a.isSuccess && a.data && a.data.id > 0){
                 this.mapAddress();
-                alert("Add Updated.");
+                alert("Addresses Updated.");
+            }
+            else{
+                alert("Something went wrong.");
+            }
+        }, (e)=>{
+            alert("Something went wrong.");
+        });
+
+        this.userService.saveAddressDetails(this.billingAddress).subscribe((a)=>{
+            if (a.isSuccess && a.data && a.data.id > 0){
+                this.mapAddress();
             }
             else{
                 alert("Something went wrong.");
@@ -72,5 +97,46 @@ export class UserProfileComponent implements OnInit {
             this.billingAddress.is_billing_address = true;
             this.billingAddress.is_same_as_postal_add = true;
         }
+    }
+
+    savePersonalDetails(){
+        if (!isNaN(this.userDetails.birthDay)) {
+            this.userDetails.birthDay = +this.userDetails.birthDay;
+        }else{
+            this.userDetails.birthDay = null;
+        }
+        
+        if (!isNaN(this.userDetails.birthMonth)) {
+            this.userDetails.birthMonth = + this.userDetails.birthMonth
+        }else{
+            this.userDetails.birthMonth = null;
+        }
+        if (!isNaN(this.userDetails.birthYear)) {
+            this.userDetails.birthYear = + this.userDetails.birthYear;
+        }else{
+            this.userDetails.birthYear = null;
+        }
+        this.userService.savePersonalDetails(this.userDetails).subscribe(a=>{
+            if (a.isSuccess && a.data && a.data.id > 0){
+                alert("Updated.");
+                this.getUserDetails();
+            }
+        });
+    }
+
+    saveBankDetails(){
+        this.userService.saveBankDetails(this.userDetails).subscribe(a=>{
+            if (a.isSuccess && a.data && a.data.id > 0){
+                alert("Updated.");
+                this.getUserDetails();
+            }
+        });
+    }
+
+    saveAdditionalAdd(i: number){
+    }
+
+    addNewAddress(){
+        this.additionalPostalAddress.push({} as UserAddressDetails);
     }
 }

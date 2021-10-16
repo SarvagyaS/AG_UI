@@ -13,6 +13,7 @@ export class RegistrationComponent implements OnInit {
     loginForm: FormGroup;
     loading = false;
     submitted = false;
+    loginSubmitted = false;
     registerModal: boolean = false;
   
     constructor(
@@ -37,8 +38,9 @@ export class RegistrationComponent implements OnInit {
       }, { validator: this.checkIfMatchingPasswords('password', 'confirm_password') });
   
       this.loginForm = this.formBuilder.group({
-        username: ['', Validators.required],
-        password: ['', [Validators.required]],
+        fullName: ['', Validators.required],
+        mobile: ['', [Validators.required]],
+        otp: ['', [Validators.required]],
       });
     }
   
@@ -86,10 +88,11 @@ export class RegistrationComponent implements OnInit {
     get l() { return this.loginForm.controls; }
   
     onLoginSubmit(){
+      this.loginSubmitted = true;
       if (this.loginForm.invalid) {
         return;
       }
-      this.loginService.authenticate(this.l.username.value,this.l.password.value).subscribe(z=>{
+      this.loginService.authenticate(this.l.fullName.value,this.l.mobile.value).subscribe(z=>{
         if(z.id > 0){
             if(!z.is_profile_update){
                 this._router.navigate(['user-profile']);
@@ -105,8 +108,8 @@ export class RegistrationComponent implements OnInit {
     }
 
     forgotPassword(){
-      if(!this.l.username.value){
-        alert("Please enter username.");
+      if(!this.l.mobile.value){
+        alert("Please enter mobile.");
       }else{
         alert("Passowrd reset link has been sent to your registered email.");
       }

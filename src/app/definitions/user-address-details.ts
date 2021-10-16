@@ -12,4 +12,5 @@ export interface UserAddressDetails {
     city: string,
     created_date: Date,
     is_active: boolean,
+    additionAddId: number,
 }
