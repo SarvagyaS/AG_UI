@@ -98,11 +98,11 @@ $(document).ready(function() {
     /*---Video Section ends---*/
 
     /*---Login Button starts---*/
-        $(document).on('click', '.login_btn, .login_icon_btn', function(e){
-            $('.overlay, .login_reg_sec').fadeIn('show');
-            // $("body").addClass("overflow-hide");
+        $(document).on('click', '.login_btn, .login_icon_btn, .user_password a', function(e){
+            $('.overlay, .login_reg_sec, .login_form_sec').fadeIn('show');
+            $(".forgot_form_sec, .reg_form_sec").hide();
             e.stopPropagation();
-        });
+        });        
 
         $(document).on('click', '.login_reg_sec .closeBtn', function(){
             $('.overlay, .login_reg_sec').fadeOut('show');
@@ -123,13 +123,7 @@ $(document).ready(function() {
             }, 500);
         });
         
-        var login_elem = $('.login_reg_sec')[0];
-        // $(document).on( 'click', function (e) {
-        //     if ($(e.target).closest(login_elem).length === 0) {
-        //         $(login_elem).fadeOut();
-        //         $(".overlay").fadeOut();
-        //     }
-        // });
+        var login_elem = $('.login_reg_sec')[0];        
                         
         $(document).on('keydown', function (e) {
             if (e.keyCode === 27 ) {
@@ -211,11 +205,10 @@ $(document).ready(function() {
         });
 
         $(document).on('click', '.profile_tabs .left_sec ul li a', function(){
-            var profile_tab = $(this).attr('data-tab');        
-            $(".profile_tabs .left_sec ul li").siblings().find("a").removeClass('active');
-            $(this).addClass('active');
+            var profile_tab = $(this).attr('data-tab');            
+            $(this).addClass('active');            
             $('.profile_content').removeClass('active');
-            $("#" + profile_tab).addClass('active');            
+            $("#" + profile_tab).addClass('active');
         });
 
         $(document).on('click', '.small_tabs ul li a', function(){
@@ -260,8 +253,14 @@ $(document).ready(function() {
             if($(".gridview").length){
                 $(this).addClass("active");
                 $(".gridview_btn").removeClass("active");
-                $(".gridview").addClass("listview");
-            }                        
+                $(".gridview").addClass("listview");            
+            }
+
+            $("#all_auction ul li").each(function(){
+                if($(this).find(".auction_bid").length){
+                    $(this).addClass("bid_yes");
+                }                
+            });
         });
 
         $(document).on('click', '.gridview_btn', function(){
@@ -344,8 +343,7 @@ $(document).ready(function() {
         var dashheader = $(".dash_header");
         var headht = $("header").outerHeight();
         $(window).scroll(function() {
-            var scroll = $(window).scrollTop();
-            console.log(headht);
+            var scroll = $(window).scrollTop();            
             if (scroll >= headht) {
                 dashheader.addClass("fixed");
             } 
@@ -354,7 +352,105 @@ $(document).ready(function() {
             }
         });
     /*---Profile Header ends---*/
+
+    /*---Login Form Starts---*/
+        $(document).on('click', '.username_radio', function(){
+            $(".username_form").show();
+            $(".mobile_form").hide();
+        });
+
+        $(document).on('click', '.mobile_radio', function(){
+            $(".username_form").hide();
+            $(".mobile_form").show();
+        });
+
+        $(document).on('click', '.get_otp', function(){
+            setTimeout(function(){
+                var errorCount = $(".mobile_form ul li").find(".error:visible").length;                 
+                if(errorCount > 0){
+                    $(".enter_otp, .verify_btn").hide();                    
+                }
+                else{                                        
+                    $(".get_otp").hide();                
+                    $(".enter_otp, .verify_btn").show();                    
+                }
+            },500);                    
+        });
+
+        $(document).on('click', '.forgot_pass', function(){
+            $(".login_form_sec").hide();
+            $(".forgot_form_sec").fadeIn();
+        });        
+    /*---Login Form ends---*/
     
+    /*---Registration Form Starts---*/
+        $(document).on('click', '#personal_detail .save_btn button', function(){
+            setTimeout(function(){
+                var errorCount = $("#personal_detail ul li").find(".error:visible").length; 
+                console.log(errorCount);
+                if(errorCount <= 0){
+                    $(".personal_tab").find(".done_image").show();
+                    $(".address_tab").click();
+                    var nationality = $(".nationality_dropdown").find(":selected").text();                
+                    if(nationality == "Indian"){                
+                        $(".indian").show();
+                    }
+                    else{                
+                        $(".non_indian").show();
+                        $(".indian").hide();
+                    }
+                }
+            },500);
+        });
+
+        $(document).on('click', '#postal_address .save_btn .next_btn', function(){            
+            $(".banking_tab").click();
+            $(".address_tab").find(".done_image").show();
+        });
+
+        $(document).on('click', '#postal_address .prev_btn', function(){
+            $(".reg_form_sec .profile_tabs ul li:first-child").find("a").click();        
+        });        
+    /*---Registration Form ends---*/
+
+    /*---Multiselect starts---*/
+        $(".multiselect_dropdown dt a").on('click', function(e) {
+            $(".multiselect_dropdown dd ul").slideToggle('fast');
+            e.stopPropagation();
+        });
+      
+        // $(".multiselect_dropdown dd ul li a").on('click', function() {
+        //     $(".multiselect_dropdown dd ul").hide();
+        // });
+      
+        function getSelectedValue(id) {
+            return $("#" + id).find("dt a span.value").html();
+        }
+      
+        $(document).bind('click', function(e) {
+            var $clicked = $(e.target);            
+            if (!$clicked.parents().hasClass("dropdown")) {
+                $(".multiselect_dropdown dd ul").hide();
+            }
+        });
+      
+        $('.mutliSelect input[type="checkbox"]').on('click', function() {      
+            var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+            title = $(this).val() + ",";
+      
+            if ($(this).is(':checked')) {
+                var html = '<span title="' + title + '">' + title + '</span>';
+                $('.multiSel').append(html);
+                // $(".hida").hide();
+                $(".user_interested .note").hide();
+            } 
+            else {
+                $('span[title="' + title + '"]').remove();
+                var ret = $(".hida");
+                $('.multiselect_dropdown dt a').append(ret);
+            }
+        });
+    /*---Multiselect ends---*/
 
     if($("#bid-range").length){
         $("#bid-range").slider({

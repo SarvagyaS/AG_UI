@@ -27,7 +27,6 @@
               "src/assets/css/swiper-bundle.min.css",
               "src/assets/css/common.css",
               "src/assets/css/aos.css",
-              "src/assets/css/slick.css"
             ],
             "scripts": [
               "src/assets/js/jquery-3.5.1.min.js",
@@ -35,7 +34,6 @@
               "src/assets/js/common.js",
               "src/assets/js/sliders.js",
               "src/assets/js/aos.js",
-              "src/assets/js/jquery.nicescroll.js"
             ],
             "vendorChunk": true,
             "extractLicenses": false,
