@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
-import { GetBrowserName } from "src/app/helpers/get-browser-name.f";
-import { LoginService } from "src/app/services/login-service";
-import { UserService } from "src/app/services/user.service";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { GetBrowserName } from 'src/app/helpers/get-browser-name.f';
+import { LoginService } from 'src/app/services/login-service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({ templateUrl: './registration.t.html' })
 
@@ -14,36 +14,36 @@ export class RegistrationComponent implements OnInit {
     loading = false;
     submitted = false;
     loginSubmitted = false;
-    registerModal: boolean = false;
-  
+    registerModal = false;
+
     constructor(
         private _router: Router,
-      private formBuilder: FormBuilder,
-      private userService: UserService,
-      private loginService: LoginService,
+        private formBuilder: FormBuilder,
+        private userService: UserService,
+        private loginService: LoginService,
       ) {
     }
-  
+
     ngOnInit() {
       this.registerForm = this.formBuilder.group({
         Id: [0],
         first_name: ['', Validators.required],
         last_name: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
-        mobile: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10),Validators.pattern("^[0-9]*$")]],
+        mobile: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10),Validators.pattern('^[0-9]*$')]],
         user_agent: [''],
         password: ['', [Validators.required, Validators.minLength(6)]],
         confirm_password: [''],
         otp: ['',[Validators.required]],
       }, { validator: this.checkIfMatchingPasswords('password', 'confirm_password') });
-  
+
       this.loginForm = this.formBuilder.group({
         fullName: ['', Validators.required],
         mobile: ['', [Validators.required]],
         otp: ['', [Validators.required]],
       });
     }
-  
+
     checkIfMatchingPasswords(passwordKey: string, passwordConfirmationKey: string) {
       return (group: FormGroup) => {
         let passwordInput = group.controls[passwordKey],
@@ -56,9 +56,9 @@ export class RegistrationComponent implements OnInit {
         }
       }
     }
-  
+
     get f() { return this.registerForm.controls; }
-  
+
     onRegistrationSubmit() {
       this.submitted = true;
       if (this.registerForm.invalid) {
@@ -69,24 +69,24 @@ export class RegistrationComponent implements OnInit {
         .subscribe(
           d => {
             if (d.isSuccess && d.data && d.data.id > 0){
-              alert("Registered");
+              alert('Registered');
               this.registerModal = false;
             }
             else{
-              alert("Not Registered");
+              alert('Not Registered');
             }
           },
           error => {
-            alert("Not Registered");
+            alert('Not Registered');
             this.loading = false;
           });
     }
-  
-  
-  
+
+
+
     //////////////////////// LOGIN
     get l() { return this.loginForm.controls; }
-  
+
     onLoginSubmit(){
       this.loginSubmitted = true;
       if (this.loginForm.invalid) {
@@ -98,20 +98,20 @@ export class RegistrationComponent implements OnInit {
                 this._router.navigate(['user-profile']);
             }
             else{
-                alert("Your profile is filled.");
+                alert('Your profile is filled.');
             }
         }
         else{
-          alert("logged failed");
+          alert('logged failed');
         }
       })
     }
 
     forgotPassword(){
       if(!this.l.mobile.value){
-        alert("Please enter mobile.");
+        alert('Please enter mobile.');
       }else{
-        alert("Passowrd reset link has been sent to your registered email.");
+        alert('Passowrd reset link has been sent to your registered email.');
       }
     }
 }
