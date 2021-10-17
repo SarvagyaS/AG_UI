@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { UserAddressDetails } from "src/app/definitions/user-address-details";
 import { UserDetails } from "src/app/definitions/user-details";
 import { GetBrowserName } from "src/app/helpers/get-browser-name.f";
 import { LoginService } from "src/app/services/login-service";
@@ -17,7 +18,8 @@ export class RegistrationComponent implements OnInit {
     loginSubmitted = false;
     registerModal: boolean = false;
     isUserNameSelected: boolean = true;
-    registrationForm: UserDetails = {} as UserDetails;
+    registrationForm: UserDetails = {userAddressDetails: [] as UserAddressDetails[]} as UserDetails;
+    postalAdd: UserAddressDetails = {} as UserAddressDetails;
 
     constructor(
         private _router: Router,
@@ -113,5 +115,10 @@ export class RegistrationComponent implements OnInit {
       }else{
         alert('Passowrd reset link has been sent to your registered email.');
       }
+    }
+
+
+    submitReg() {
+      console.log(this.registrationForm, this.postalAdd)
     }
 }
