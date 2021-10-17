@@ -4,6 +4,7 @@ import { Component, OnInit } from "@angular/core";
 import { LoginService } from 'src/app/services/login-service';
 import { UserService } from 'src/app/services/user.service';
 import { UserAddressDetails } from 'src/app/definitions/user-address-details';
+import { UploadService } from 'src/app/services/upload-service';
 
 @Component({ templateUrl: './user-profile.t.html' })
 
@@ -17,7 +18,8 @@ export class UserProfileComponent implements OnInit {
     constructor(
         private _router: Router,
         private loginService: LoginService,
-        private userService: UserService
+        private userService: UserService,
+        private uploadService: UploadService
     ) {
         this.loginService.currentUser.subscribe((x) => {
             this.userDetails = x;
@@ -139,4 +141,24 @@ export class UserProfileComponent implements OnInit {
     addNewAddress(){
         this.additionalPostalAddress.push({} as UserAddressDetails);
     }
+
+
+    public uploadFile = (files) => {
+        if (files.length === 0) {
+          return;
+        }
+        let filesToUpload : File[] = files;
+        const formData = new FormData();
+          
+        Array.from(filesToUpload).map((file, index) => {
+          return formData.append('file'+index, file, file.name);
+        });
+
+        this.uploadService.upload(formData).subscribe(c=> {
+            if (c.isSuccess && c.data && c.data.length > 0){
+                alert("Updated.");
+            }
+        } );
+      }
+
 }
