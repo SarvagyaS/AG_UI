@@ -1,4 +1,6 @@
 export interface Login{
     Username: string,
-    Password: string
+    Password: string,
+    PhoneNo: string,
+    isUserNameSelected: boolean
 }

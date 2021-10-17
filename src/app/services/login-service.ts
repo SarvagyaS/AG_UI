@@ -24,8 +24,8 @@ export class LoginService {
         return this.currentUserSubject.value;
     }
     
-    public authenticate(un: string, password: string) {
-        var kvp: Login = { Username: un, Password: password };
+    public authenticate(un: string, password: string, phoneNum: string, isUserNameSelected: boolean) {
+        var kvp: Login = { Username: un, Password: password, PhoneNo: phoneNum, isUserNameSelected: isUserNameSelected };
         return this.apiService.post(this.prefix + '/Authenticate', null, kvp)
         .pipe(map((d:UserDetails) => {
             if(d.id != 0){
