@@ -5,12 +5,6 @@ import { UserDetails } from "src/app/definitions/user-details";
 import { GetBrowserName } from "src/app/helpers/get-browser-name.f";
 import { LoginService } from "src/app/services/login-service";
 import { UserService } from "src/app/services/user.service";
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { GetBrowserName } from 'src/app/helpers/get-browser-name.f';
-import { LoginService } from 'src/app/services/login-service';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({ templateUrl: './registration.t.html' })
 
