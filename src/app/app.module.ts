@@ -15,6 +15,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.c';
 import { CareersComponent } from './components/careers/careers.c';
 import { WhoWeAreComponent } from './components/who-we-are/who-we-are.c';
 import { LiveAuctionComponent } from './components/live-auction/live-auction.c';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LiveAuctionComponent } from './components/live-auction/live-auction.c';
     UserProfileComponent,
     CareersComponent,
     WhoWeAreComponent,
-    LiveAuctionComponent
+    LiveAuctionComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,9 @@ import { LoginService } from 'src/app/services/login-service';
 import { UserService } from 'src/app/services/user.service';
 import { UserAddressDetails } from 'src/app/definitions/user-address-details';
 import { UploadService } from 'src/app/services/upload-service';
+import { HttpClient } from '@angular/common/http';
+import { Constants } from 'src/app/definitions/constants';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({ templateUrl: './user-profile.t.html' })
 
@@ -19,7 +22,9 @@ export class UserProfileComponent implements OnInit {
         private _router: Router,
         private loginService: LoginService,
         private userService: UserService,
-        private uploadService: UploadService
+        private uploadService: UploadService,
+        private http: HttpClient,
+        private sanitizer: DomSanitizer 
     ) {
         this.loginService.currentUser.subscribe((x) => {
             this.userDetails = x;
@@ -154,11 +159,20 @@ export class UserProfileComponent implements OnInit {
           return formData.append('file'+index, file, file.name);
         });
 
-        this.uploadService.upload(formData).subscribe(c=> {
-            if (c.isSuccess && c.data && c.data.length > 0){
-                alert("Updated.");
-            }
-        } );
+
+        this.http.post(Constants.apiBaseUrl + '/Upload/UploadImage', formData, {reportProgress: true, observe: 'events'})
+      .subscribe(event => {
+          console.log("uploaded");
+        });
+        // this.uploadService.upload(formData).subscribe(c=> {
+        //     if (c.isSuccess && c.data && c.data.length > 0){
+        //         alert("Updated.");
+        //     }
+        // } );
       }
 
+      getUrl(){
+        return this.sanitizer.bypassSecurityTrustResourceUrl(this.userDetails.profilePicUrl);
+      }
 }
+

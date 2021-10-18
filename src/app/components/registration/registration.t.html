@@ -1179,7 +1179,6 @@
 
 
 
-
     <section class="login_reg_sec">
         <div class="login_form_sec">
            <button class="closeBtn">X</button>
@@ -1229,7 +1228,7 @@
                  <ul>
                     <li>
                        <div class="custom_input">
-                          <input type="text" name="phoneNo" placeholder="Mobile No" maxlength="16"/>
+                          <input type="text" name="phoneNo" placeholder="Mobile No" maxlength="16" formControlName="phoneNo"/>
                        </div>
                     </li>
 
@@ -1240,7 +1239,7 @@
                     </li>
 
                     <li>
-                       <button type="submit" class="btn btn-yellow get_otp">Get OTP</button>
+                       <button type="button" class="btn btn-yellow get_otp">Get OTP</button>
                        <button type="submit" class="btn btn-yellow verify_btn">Verify OTP</button>
                     </li>
                  </ul>
@@ -1724,22 +1723,22 @@
                           <ul>
                              <li class="col_6">
                                 <div class="custom_input nickname_sec">
-                                   <input type="text" placeholder="Address Line 1" [(ngModel)]="postalAdd.address_line_1" [ngModelOptions]="{standalone: true}">
+                                   <input type="text" placeholder="Address Line 1" [(ngModel)]="postalAddress.address_line_1" [ngModelOptions]="{standalone: true}">
                                 </div>
                              </li>
 
                              <li class="col_6">
                                 <div class="custom_input nickname_sec">
-                                   <input type="text" placeholder="Address Line 2" [(ngModel)]="postalAdd.address_line_2" [ngModelOptions]="{standalone: true}">
+                                   <input type="text" placeholder="Address Line 2" [(ngModel)]="postalAddress.address_line_2" [ngModelOptions]="{standalone: true}">
                                 </div>
                              </li>
 
                              <li class="col_6 col_2">
                                 <div class="custom_input nickname_sec">
-                                   <input type="text" placeholder="Postal Address" [(ngModel)]="postalAdd.postal_code" [ngModelOptions]="{standalone: true}">
+                                   <input type="text" placeholder="Postal Address" [(ngModel)]="postalAddress.postal_code" [ngModelOptions]="{standalone: true}">
                                 </div>
 
-                                <select class="custom_select" [(ngModel)]="postalAdd.country" [ngModelOptions]="{standalone: true}" (change)="postalAdd.country = $event.target.value" >
+                                <select class="custom_select" [(ngModel)]="postalAddress.country" [ngModelOptions]="{standalone: true}" (change)="postalAddress.country = $event.target.value" >
                                    <option>Country</option>
                                    <option>India</option>
                                    <option>USA</option>
@@ -1748,7 +1747,7 @@
                              </li>
 
                              <li class="col_6 col_2 indian">
-                                <select class="custom_select" [(ngModel)]="postalAdd.state" [ngModelOptions]="{standalone: true}" (change)="postalAdd.country = $event.target.value">
+                                <select class="custom_select" [(ngModel)]="postalAddress.state" [ngModelOptions]="{standalone: true}" (change)="postalAddress.country = $event.target.value">
                                    <option>State</option>
                                    <option>Maharashtra</option>
                                    <option>Delhi</option>
@@ -1787,72 +1786,72 @@
                           </div>
 
                           <div class="form_content">
-                             <ul>
-                                <li>
-                                   <div class="custom_input nickname_sec">
-                                      <input type="text" placeholder="Your Name">
-                                   </div>
-                                </li>
-
-                                <li></li>
-                                <li></li>
-
-                                <li class="col_6">
-                                   <div class="custom_input nickname_sec">
-                                      <input type="text" placeholder="Address Line 1">
-                                   </div>
-                                </li>
-
-                                <li class="col_6">
-                                   <div class="custom_input nickname_sec">
-                                      <input type="text" placeholder="Address Line 2">
-                                   </div>
-                                </li>
-
-                                <li class="col_6 col_2">
-                                   <div class="custom_input nickname_sec">
-                                      <input type="text" placeholder="Postal Address">
-                                   </div>
-
-                                   <select class="custom_select">
-                                      <option>Country</option>
-                                      <option>India</option>
-                                      <option>USA</option>
-                                      <option>australia</option>
-                                   </select>
-                                </li>
-
-                                <li class="col_6 col_2 indian">
-                                   <select class="custom_select">
-                                      <option>State</option>
-                                      <option>Maharashtra</option>
-                                      <option>Delhi</option>
-                                      <option>Rajasthan</option>
-                                   </select>
-
-                                   <select class="custom_select">
-                                      <option>City</option>
-                                      <option>Mumbai</option>
-                                      <option>Delhi</option>
-                                      <option>Rajasthan</option>
-                                   </select>
-                                </li>
-
-                                <li class="col_6 non_indian">
-                                   <div class="custom_input">
-                                      <input type="text" placeholder="Location">
-                                   </div>
-                                </li>
-
-                                <li class="custom_check_cont">
-                                   <label class="custom_checkbox">
-                                      Add new address
-                                      <input type="checkbox">
-                                      <span class="checkmark"></span>
-                                   </label>
-                                </li>
-                             </ul>
-                          </div>
+                            <ul>
+                               <li>
+                                  <div class="custom_input nickname_sec">
+                                     <input type="text" placeholder="Your Name"  [(ngModel)]="billingAddress.name" [ngModelOptions]="{standalone: true}">
+                                  </div>
+                               </li>
+                        
+                               <li></li>
+                               <li></li>
+                        
+                               <li class="col_6">
+                                  <div class="custom_input nickname_sec">
+                                     <input type="text" placeholder="Address Line 1"  [(ngModel)]="billingAddress.address_line_1" [ngModelOptions]="{standalone: true}">
+                                  </div>
+                               </li>
+                        
+                               <li class="col_6">
+                                  <div class="custom_input nickname_sec">
+                                     <input type="text" placeholder="Address Line 2"  [(ngModel)]="billingAddress.address_line_2" [ngModelOptions]="{standalone: true}">
+                                  </div>
+                               </li>
+                        
+                               <li class="col_6 col_2">
+                                  <div class="custom_input nickname_sec">
+                                     <input type="text" placeholder="Postal Address"  [(ngModel)]="billingAddress.postal_code" [ngModelOptions]="{standalone: true}">
+                                  </div>
+                        
+                                  <select class="custom_select" [(ngModel)]="billingAddress.country" [ngModelOptions]="{standalone: true}">
+                                     <option>Country</option>
+                                     <option>India</option>
+                                     <option>USA</option>
+                                     <option>australia</option>
+                                  </select>
+                               </li>
+                        
+                               <li class="col_6 col_2 indian">
+                                  <select class="custom_select"  [(ngModel)]="billingAddress.state" [ngModelOptions]="{standalone: true}">
+                                     <option>State</option>
+                                     <option>Maharashtra</option>
+                                     <option>Delhi</option>
+                                     <option>Rajasthan</option>
+                                  </select>
+                        
+                                  <select class="custom_select"  [(ngModel)]="billingAddress.city" [ngModelOptions]="{standalone: true}">
+                                     <option>City</option>
+                                     <option>Mumbai</option>
+                                     <option>Delhi</option>
+                                     <option>Rajasthan</option>
+                                  </select>
+                               </li>
+                        
+                               <li class="col_6 non_indian">
+                                  <div class="custom_input">
+                                     <input type="text" placeholder="Location" >
+                                  </div>
+                               </li>
+                        
+                               <li class="custom_check_cont">
+                                  <label class="custom_checkbox">
+                                     Add new address
+                                     <input type="checkbox">
+                                     <span class="checkmark"></span>
+                                  </label>
+                               </li>
+                            </ul>
+                         </div>
                        </div>
 
                        <div class="save_btn">

@@ -17,9 +17,12 @@ export class RegistrationComponent implements OnInit {
     submitted = false;
     loginSubmitted = false;
     registerModal: boolean = false;
-    isUserNameSelected: boolean = true;
+    isUserNameSelected: string;
     registrationForm: UserDetails = {userAddressDetails: [] as UserAddressDetails[]} as UserDetails;
-    postalAdd: UserAddressDetails = {} as UserAddressDetails;
+    postalAddress: UserAddressDetails = {} as UserAddressDetails;
+    billingAddress: UserAddressDetails = {} as UserAddressDetails;
+    additionalPostalAddress: UserAddressDetails[] = [];
+
 
     constructor(
         private _router: Router,
@@ -94,7 +97,11 @@ export class RegistrationComponent implements OnInit {
 
     onLoginSubmit(){
       this.loginSubmitted = true;
-      this.loginService.authenticate(this.l.username.value,this.l.password.value,this.l.phoneNo.value, this.isUserNameSelected).subscribe(z=>{
+      var a = true;
+      if (this.isUserNameSelected == 'false') {
+        a = false;
+      } 
+      this.loginService.authenticate(this.l.username.value,this.l.password.value,this.l.phoneNo.value, a).subscribe(z=>{
         if(z.id > 0){
             if(!z.is_profile_update){
                 this._router.navigate(['user-profile']);
@@ -119,6 +126,20 @@ export class RegistrationComponent implements OnInit {
 
 
     submitReg() {
-      console.log(this.registrationForm, this.postalAdd)
+      var add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];
+      this.registrationForm.userAddressDetails = add;
+      this.userService.register(this.registrationForm).subscribe(d =>{
+        if (d.isSuccess && d.data && d.data.id > 0){
+                  alert("Registered");
+        //          this.registerModal = false;
+                }
+                else{
+                  alert("Not Registered");
+                }
+              },
+              error => {
+                alert("Not Registered");
+          //      this.loading = false;
+              });
     }
 }

@@ -34,7 +34,7 @@ export interface UserDetails {
     birthDay: number;
     birthMonth: number;
     birthYear: number;
-
+    profilePicUrl: string;
 
     //NotMapped
     userAddressDetails: UserAddressDetails[]

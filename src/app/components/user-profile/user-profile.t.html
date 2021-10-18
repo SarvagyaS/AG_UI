@@ -1019,17 +1019,18 @@
 
                <div class="form_content">
                   <div class="pic_upload">
-                     <img src="./assets/images/user.png" alt="User">
+                     <img *ngIf="userDetails.profilePicUrl == null" src="./assets/images/user.png" alt="User">
+                     <img *ngIf="userDetails.profilePicUrl != null" [src]="getUrl()" alt="User">
                      <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
-    <button type="button" class="btn btn-success fileUpload" (click)="file.click()">Upload File</button>
+    <button type="button" class="btn btn-success fileUpload" (click)="file.click()"></button>
 
                      <!-- <input type="file" class="fileUpload"/> -->
                   </div>
 
                   <ul>
                      <li>
-                        <span class="label">Tushar Sethi</span>
-                        <p>tushar.sethi@gmail.com</p>
+                        <span class="label">{{userDetails.first_name}} {{userDetails.last_name}}</span>
+                        <p>{{userDetails.email}}</p>
                      </li>
 
                      <li>
