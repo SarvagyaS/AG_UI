@@ -181,8 +181,8 @@ export class UserProfileComponent implements OnInit {
       }
 
 
-      public addAdditionalAddress() {
-        this.additionalAddress = !this.additionalAddress;
+      public addAdditionalAddress(event: any) {
+        this.additionalAddress = event.target.checked;
         if (this.additionalAddress) {
           this.billingAddress.is_billing_address = false;
           this.postalAddress.is_billing_address = false;
@@ -216,7 +216,15 @@ export class UserProfileComponent implements OnInit {
 
       save() {
         this.postalAddress.name = this.userDetails.first_name;
-        const add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];
+        delete this.postalAddress.userDetails;
+        delete this.billingAddress.userDetails;
+        let add;
+        if (this.additionalAddress) {
+          delete this.additionalPostalAddress.userDetails;
+          add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
+        } else {
+          add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];
+        }
         this.userDetails.userAddressDetails = add;
         if (!isNaN(this.userDetails.birthDay)) {
           this.userDetails.birthDay = +this.userDetails.birthDay;

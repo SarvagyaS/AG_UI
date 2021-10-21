@@ -21,7 +21,8 @@ export class RegistrationComponent implements OnInit {
     registrationForm: UserDetails = {userAddressDetails: [] as UserAddressDetails[]} as UserDetails;
     postalAddress: UserAddressDetails = {} as UserAddressDetails;
     billingAddress: UserAddressDetails = {} as UserAddressDetails;
-    additionalPostalAddress: UserAddressDetails[] = [];
+    additionalPostalAddress: UserAddressDetails = {} as UserAddressDetails;
+    additionalAddress =  false;
 
 
     constructor(
@@ -71,6 +72,22 @@ export class RegistrationComponent implements OnInit {
     }
 
 
+    public addAdditionalAddress(event: any) {
+      this.additionalAddress = event.target.checked;
+      if (this.additionalAddress) {
+        this.billingAddress.is_billing_address = false;
+        this.postalAddress.is_billing_address = false;
+        const userAddressDetails: UserAddressDetails = {} as UserAddressDetails;
+        this.additionalPostalAddress = userAddressDetails;
+        this.additionalPostalAddress.is_billing_address = true;
+      } else {
+        const userAddressDetails: UserAddressDetails = {} as UserAddressDetails;
+        this.billingAddress.is_billing_address = true;
+        this.additionalPostalAddress = userAddressDetails;
+      }
+    }
+
+
     //////////////////////// LOGIN
     get l() { return this.loginForm.controls; }
 
@@ -106,7 +123,15 @@ export class RegistrationComponent implements OnInit {
 
     submitReg() {
       this.postalAddress.name = this.registrationForm.first_name;
-      const add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];
+      delete this.postalAddress.userDetails;
+      delete this.billingAddress.userDetails;
+      let add;
+      if (this.additionalAddress) {
+        delete this.additionalPostalAddress.userDetails;
+        add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
+      } else {
+        add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];
+      }
       this.registrationForm.userAddressDetails = add;
       if (!isNaN(this.registrationForm.birthDay)) {
         this.registrationForm.birthDay = +this.registrationForm.birthDay;

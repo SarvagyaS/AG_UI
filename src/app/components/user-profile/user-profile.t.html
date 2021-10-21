@@ -1034,33 +1034,33 @@
                      </li>
 
                      <li>
-                        <span class="label">I am</span>
-                        <div class="gender_sign custom_img_radio">
-                           <span class="image_radio">
-                              <input type="radio"ngDefaultControl  name="gender" id="male" class="input-hidden" />
-                              <label for="male" class="svg_sec">
-                                 <img src="./assets/images/male.svg" alt="Male" />
-                              </label>
-                              <span>Male</span>
-                           </span>
+                      <span class="label">I am</span>
+                      <div class="gender_sign custom_img_radio">
+                         <span class="image_radio">
+                            <input type="radio" name="gender" id="male" class="input-hidden" value="Male"  [(ngModel)]="userDetails.gender" [ngModelOptions]="{standalone: true}" (change)="userDetails.gender = $event.target.value"/>
+                            <label for="male" class="svg_sec">
+                               <img src="../../../assets/images/male.svg" alt="Male" />
+                            </label>
+                            <span>Male</span>
+                         </span>
 
-                           <span class="image_radio">
-                              <input type="radio"ngDefaultControl  name="gender" id="female" class="input-hidden" />
-                              <label for="female" class="svg_sec">
-                                 <img src="./assets/images/female.svg" alt="Male" />
-                              </label>
-                              <span>Female</span>
-                           </span>
+                         <span class="image_radio">
+                            <input type="radio" name="gender" id="female" class="input-hidden"value="Female"  [(ngModel)]="userDetails.gender" [ngModelOptions]="{standalone: true}" (change)="userDetails.gender = $event.target.value"/>
+                            <label for="female" class="svg_sec">
+                               <img src="../../../assets/images/female.svg" alt="Female" />
+                            </label>
+                            <span>Female</span>
+                         </span>
 
-                           <span class="image_radio">
-                              <input type="radio"ngDefaultControl  name="gender" id="transgender" class="input-hidden" />
-                              <label for="transgender" class="svg_sec">
-                                 <img src="./assets/images/transgender.svg" alt="Male" />
-                              </label>
-                              <span>Transgender</span>
-                           </span>
-                        </div>
-                     </li>
+                         <span class="image_radio">
+                            <input type="radio" name="gender" id="transgender" class="input-hidden" value="Transgender"  [(ngModel)]="userDetails.gender" [ngModelOptions]="{standalone: true}" (change)="userDetails.gender = $event.target.value" />
+                            <label for="transgender" class="svg_sec">
+                               <img src="../../../assets/images/transgender.svg" alt="Transgender" />
+                            </label>
+                            <span>Transgender</span>
+                         </span>
+                      </div>
+                   </li>
 
                      <li>
                         <span class="label">Date of Birth</span>
@@ -1363,7 +1363,7 @@
 
                      <li class="custom_check_cont">
                         <label class="custom_checkbox">
-                           My billing address is different than my postal address
+                           My billing address is same as my postal address
                            <input type="checkbox" [checked]="billingAddress.is_same_as_postal_add" (click)="onBillingAddressClick()">
                            <span class="checkmark"></span>
                         </label>
@@ -1382,7 +1382,7 @@
                      <ul>
                         <li>
                            <div class="custom_input nickname_sec">
-                              <input type="text" placeholder="Your Name"ngDefaultControl  name="bln1" [(ngModel)]="billingAddress.name">
+                              <input type="text" placeholder="Your Name"ngDefaultControl [disabled]="billingAddress.is_same_as_postal_add" name="bln1" [(ngModel)]="billingAddress.name">
                            </div>
                         </li>
 
@@ -1391,22 +1391,22 @@
 
                         <li class="col_6">
                            <div class="custom_input nickname_sec">
-                              <input type="text" placeholder="Address Line 1" ngDefaultControl  name="bal1"[(ngModel)]="billingAddress.address_line_1">
+                              <input type="text" placeholder="Address Line 1" ngDefaultControl [disabled]="billingAddress.is_same_as_postal_add" name="bal1"[(ngModel)]="billingAddress.address_line_1">
                            </div>
                         </li>
 
                         <li class="col_6">
                            <div class="custom_input nickname_sec">
-                              <input type="text" placeholder="Address Line 2"ngDefaultControl  name="bal2" [(ngModel)]="billingAddress.address_line_2">
+                              <input type="text" placeholder="Address Line 2"ngDefaultControl [disabled]="billingAddress.is_same_as_postal_add" name="bal2" [(ngModel)]="billingAddress.address_line_2">
                            </div>
                         </li>
 
                         <li class="col_6 col_2">
                            <div class="custom_input nickname_sec">
-                              <input type="text" placeholder="Postal Address"ngDefaultControl  name="pa32" [(ngModel)]="billingAddress.postal_code">
+                              <input type="text" placeholder="Postal Address"ngDefaultControl [disabled]="billingAddress.is_same_as_postal_add" name="pa32" [(ngModel)]="billingAddress.postal_code">
                            </div>
 
-                           <select class="custom_select"ngDefaultControl  name="balc1" [(ngModel)]="billingAddress.country" (change)="billingAddress.country = $event.target.value">
+                           <select class="custom_select"ngDefaultControl  name="balc1" [disabled]="billingAddress.is_same_as_postal_add" [(ngModel)]="billingAddress.country" (change)="billingAddress.country = $event.target.value">
                               <option value="Country">Country</option>
                               <option value="India">India</option>
                               <option value="USA">USA</option>
@@ -1415,14 +1415,14 @@
                         </li>
 
                         <li class="col_6 col_2">
-                           <select class="custom_select"ngDefaultControl  name="balc12" [(ngModel)]="billingAddress.city" (change)="billingAddress.city = $event.target.value">
+                           <select class="custom_select"ngDefaultControl  name="balc12" [disabled]="billingAddress.is_same_as_postal_add" [(ngModel)]="billingAddress.city" (change)="billingAddress.city = $event.target.value">
                               <option value="City">City</option>
                               <option value="Mumbai">Mumbai</option>
                               <option value="Delhi">Delhi</option>
                               <option value="Rajasthan">Rajasthan</option>
                            </select>
 
-                           <select class="custom_select"ngDefaultControl  name="bals12" [(ngModel)]="billingAddress.state" (change)="billingAddress.state = $event.target.value">
+                           <select class="custom_select"ngDefaultControl  name="bals12" [disabled]="billingAddress.is_same_as_postal_add" [(ngModel)]="billingAddress.state" (change)="billingAddress.state = $event.target.value">
                               <option value="State">State</option>
                               <option value="Maharashtra">Maharashtra</option>
                               <option value="Delhi">Delhi</option>
@@ -1433,7 +1433,7 @@
                         <li class="custom_check_cont">
                            <label class="custom_checkbox">
                               Add new address
-                              <input type="checkbox" [(ngModel)]= "additionalAddress" (change)="this.addAdditionalAddress()">
+                              <input type="checkbox" [(ngModel)]= "additionalAddress" [disabled]="additionalPostalAddress && additionalPostalAddress.id" (change)="this.addAdditionalAddress($event)">
                               <span class="checkmark"></span>
                            </label>
                         </li>
@@ -1441,7 +1441,7 @@
                   </div>
                </div>
 
-               <div *ngIf="additionalAddress" class="billing_add">
+               <div *ngIf="additionalAddress || additionalPostalAddress && additionalPostalAddress.id" class="billing_add">
                 <div class="heading">
                    <h3>
                       New Address
@@ -1501,7 +1501,7 @@
                       </li>
                    </ul>
                 </div>
-             </div>
+               </div>
 
                <div class="save_btn">
                   <button type="submit" (click)="save()" class="btn btn-yellow">Submit</button>
@@ -3018,7 +3018,7 @@
 
                      <li class="custom_check_cont">
                         <label class="custom_checkbox">
-                           My billing address is different than my postal address
+                           My billing address is same as my postal address
                            <input type="checkbox"ngDefaultControl  name="gdf89"[(ngModel)]="billingAddress.is_same_as_postal_add" (change)="billIsSameAsPost()">
                            <span class="checkmark"></span>
                         </label>
@@ -4556,7 +4556,7 @@
 
                        <div class="billing_add custom_check_cont">
                           <label class="custom_checkbox">
-                             My billing address is different than my postal address
+                             My billing address is same as my postal address
                              <input type="checkbox" [(ngModel)]="billingAddress.is_same_as_postal_add" (change)="billIsSameAsPost()"ngDefaultControl  name="pad987">
                              <span class="checkmark"></span>
                           </label>

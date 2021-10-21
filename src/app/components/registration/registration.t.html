@@ -1770,7 +1770,7 @@
 
                              <li class="custom_check_cont col_6">
                                 <label class="custom_checkbox text_left">
-                                   My billing address is different than my postal address
+                                   My billing address is same as my postal address
                                    <input type="checkbox" [(ngModel)]="billingAddress.is_same_as_postal_add" [ngModelOptions]="{standalone: true}" (click)="onBillingAddressClick()">
                                    <span class="checkmark"></span>
                                 </label>
@@ -1787,73 +1787,129 @@
 
                           <div class="form_content">
                             <ul>
-                               <li>
-                                  <div class="custom_input nickname_sec">
-                                     <input type="text" placeholder="Your Name"  [(ngModel)]="billingAddress.name" [ngModelOptions]="{standalone: true}">
-                                  </div>
-                               </li>
+                              <li>
+                                <div class="custom_input nickname_sec">
+                                   <input type="text" placeholder="Your Name"[disabled]="billingAddress.is_same_as_postal_add" name="bln1" [(ngModel)]="billingAddress.name" [ngModelOptions]="{standalone: true}">
+                                </div>
+                             </li>
 
-                               <li></li>
-                               <li></li>
+                             <li></li>
+                             <li></li>
 
-                               <li class="col_6">
-                                  <div class="custom_input nickname_sec">
-                                     <input type="text" placeholder="Address Line 1"  [(ngModel)]="billingAddress.address_line_1" [ngModelOptions]="{standalone: true}">
-                                  </div>
-                               </li>
+                             <li class="col_6">
+                                <div class="custom_input nickname_sec">
+                                   <input type="text" placeholder="Address Line 1" [disabled]="billingAddress.is_same_as_postal_add" name="bal1"[(ngModel)]="billingAddress.address_line_1" [ngModelOptions]="{standalone: true}">
+                                </div>
+                             </li>
 
-                               <li class="col_6">
-                                  <div class="custom_input nickname_sec">
-                                     <input type="text" placeholder="Address Line 2"  [(ngModel)]="billingAddress.address_line_2" [ngModelOptions]="{standalone: true}">
-                                  </div>
-                               </li>
+                             <li class="col_6">
+                                <div class="custom_input nickname_sec">
+                                   <input type="text" placeholder="Address Line 2"[disabled]="billingAddress.is_same_as_postal_add" name="bal2" [(ngModel)]="billingAddress.address_line_2" [ngModelOptions]="{standalone: true}">
+                                </div>
+                             </li>
 
-                               <li class="col_6 col_2">
-                                  <div class="custom_input nickname_sec">
-                                     <input type="text" placeholder="Postal Address"  [(ngModel)]="billingAddress.postal_code" [ngModelOptions]="{standalone: true}">
-                                  </div>
+                             <li class="col_6 col_2">
+                                <div class="custom_input nickname_sec">
+                                   <input type="text" placeholder="Postal Address"[disabled]="billingAddress.is_same_as_postal_add" name="pa32" [(ngModel)]="billingAddress.postal_code" [ngModelOptions]="{standalone: true}">
+                                </div>
 
-                                  <select class="custom_select" [(ngModel)]="billingAddress.country" [ngModelOptions]="{standalone: true}">
-                                     <option value="Country">Country</option>
-                                     <option value="India">India</option>
-                                     <option value="USA">USA</option>
-                                     <option value="australia">australia</option>
-                                  </select>
-                               </li>
+                                <select class="custom_select" name="balc1" [disabled]="billingAddress.is_same_as_postal_add" [(ngModel)]="billingAddress.country" [ngModelOptions]="{standalone: true}" (change)="billingAddress.country = $event.target.value">
+                                   <option value="Country">Country</option>
+                                   <option value="India">India</option>
+                                   <option value="USA">USA</option>
+                                   <option value="australia">australia</option>
+                                </select>
+                             </li>
 
-                               <li class="col_6 col_2 indian">
-                                  <select class="custom_select"  [(ngModel)]="billingAddress.state" [ngModelOptions]="{standalone: true}">
-                                     <option value="State">State</option>
-                                     <option value="Maharashtra">Maharashtra</option>
-                                     <option value="Delhi">Delhi</option>
-                                     <option value="Rajasthan">Rajasthan</option>
-                                  </select>
+                             <li class="col_6 col_2">
+                               <select class="custom_select"  name="bals12" [disabled]="billingAddress.is_same_as_postal_add" [(ngModel)]="billingAddress.state" [ngModelOptions]="{standalone: true}" (change)="billingAddress.state = $event.target.value">
+                                  <option value="State">State</option>
+                                  <option value="Maharashtra">Maharashtra</option>
+                                  <option value="Delhi">Delhi</option>
+                                  <option value="Rajasthan">Rajasthan</option>
+                               </select>
 
-                                  <select class="custom_select"  [(ngModel)]="billingAddress.city" [ngModelOptions]="{standalone: true}">
-                                     <option value="City">City</option>
-                                     <option value="Mumbai">Mumbai</option>
-                                     <option value="Delhi">Delhi</option>
-                                     <option value="Rajasthan">Rajasthan</option>
-                                  </select>
-                               </li>
+                                <select class="custom_select" name="balc12" [disabled]="billingAddress.is_same_as_postal_add" [(ngModel)]="billingAddress.city" [ngModelOptions]="{standalone: true}" (change)="billingAddress.city = $event.target.value">
+                                   <option value="City">City</option>
+                                   <option value="Mumbai">Mumbai</option>
+                                   <option value="Delhi">Delhi</option>
+                                   <option value="Rajasthan">Rajasthan</option>
+                                </select>
 
-                               <li class="col_6 non_indian">
-                                  <div class="custom_input">
-                                     <input type="text" placeholder="Location" [(ngModel)]="billingAddress.city" [ngModelOptions]="{standalone: true}">
-                                  </div>
-                               </li>
+                             </li>
 
-                               <!-- <li class="custom_check_cont">
-                                  <label class="custom_checkbox">
-                                     Add new address
-                                     <input type="checkbox">
-                                     <span class="checkmark"></span>
-                                  </label>
-                               </li> -->
+                               <li class="custom_check_cont">
+                                <label class="custom_checkbox">
+                                   Add new address
+                                   <input type="checkbox" [(ngModel)]= "additionalAddress" [ngModelOptions]="{standalone: true}" [disabled]="additionalPostalAddress && additionalPostalAddress.id" (change)="this.addAdditionalAddress($event)">
+                                   <span class="checkmark"></span>
+                                </label>
+                             </li>
                             </ul>
                          </div>
                        </div>
 
+                       <div *ngIf="additionalAddress || additionalPostalAddress && additionalPostalAddress.id" class="billing_add">
+                        <div class="heading">
+                           <h3>
+                              New Address
+                           </h3>
+                        </div>
+
+                        <div class="form_content">
+                           <ul>
+                              <li>
+                                 <div class="custom_input nickname_sec">
+                                    <input type="text" name="apan1" placeholder="Your Name" [(ngModel)]="additionalPostalAddress.name" [ngModelOptions]="{standalone: true}">
+                                 </div>
+                              </li>
+
+                              <li></li>
+                              <li></li>
+
+                              <li class="col_6">
+                                 <div class="custom_input nickname_sec">
+                                    <input type="text" name="apa2" placeholder="Address Line 1"  [(ngModel)]="additionalPostalAddress.address_line_1" [ngModelOptions]="{standalone: true}">
+                                 </div>
+                              </li>
+
+                              <li class="col_6">
+                                 <div class="custom_input nickname_sec">
+                                    <input type="text"  name="apa3" placeholder="Address Line 2" [(ngModel)]="additionalPostalAddress.address_line_2" [ngModelOptions]="{standalone: true}">
+                                 </div>
+                              </li>
+
+                              <li class="col_6 col_2">
+                                 <div class="custom_input nickname_sec">
+                                    <input type="text"  name="apa4" placeholder="Postal Address" [(ngModel)]="additionalPostalAddress.postal_code" [ngModelOptions]="{standalone: true}">
+                                 </div>
+
+                                 <select class="custom_select"  name="apa5"[(ngModel)]="additionalPostalAddress.country" [ngModelOptions]="{standalone: true}" (change)="additionalPostalAddress.country = $event.target.value">
+                                    <option value="Country">Country</option>
+                                    <option value="India">India</option>
+                                    <option value="USA">USA</option>
+                                    <option value="australia">australia</option>
+                                 </select>
+                              </li>
+
+                              <li class="col_6 col_2">
+                                 <select class="custom_select"  name="apa6"[(ngModel)]="additionalPostalAddress.city" [ngModelOptions]="{standalone: true}" (change)="additionalPostalAddress.city = $event.target.value">
+                                    <option value="City">City</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                 </select>
+
+                                 <select class="custom_select"   name="apa7"[(ngModel)]="additionalPostalAddress.state" [ngModelOptions]="{standalone: true}" (change)="additionalPostalAddress.state = $event.target.value">
+                                    <option value="State">State</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                 </select>
+                              </li>
+                           </ul>
+                        </div>
+                       </div>
                        <div class="save_btn">
                           <a href="javascript:;" class="btn btn-yellow prev_btn">Prev</a>
                           <button type="submit" class="btn btn-yellow next_btn">Next</button>

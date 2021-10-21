@@ -1,6 +1,7 @@
 export interface UserAddressDetails {
     id: number;
     userDetailsId: number;
+    userDetails?: any;
     name: string;
     is_billing_address: boolean;
     is_same_as_postal_add: boolean;
