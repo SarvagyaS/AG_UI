@@ -106,7 +106,7 @@ export class RegistrationComponent implements OnInit {
 
     submitReg() {
       this.postalAddress.name = this.registrationForm.first_name;
-      const add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
+      const add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];
       this.registrationForm.userAddressDetails = add;
       if (!isNaN(this.registrationForm.birthDay)) {
         this.registrationForm.birthDay = +this.registrationForm.birthDay;

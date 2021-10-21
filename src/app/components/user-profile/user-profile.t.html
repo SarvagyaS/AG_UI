@@ -1433,7 +1433,7 @@
                         <li class="custom_check_cont">
                            <label class="custom_checkbox">
                               Add new address
-                              <input type="checkbox" [checked]= "additionalAddress" (change)="this.addAdditionalAddress()">
+                              <input type="checkbox" [(ngModel)]= "additionalAddress" (change)="this.addAdditionalAddress()">
                               <span class="checkmark"></span>
                            </label>
                         </li>
