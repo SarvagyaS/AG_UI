@@ -14,7 +14,7 @@ export class UserService {
 
     constructor(private apiService: BaseApiService) {
     }
-    
+
     public register(ud: UserDetails): Observable<ApiResponse<UserDetails>> {
         return this.apiService.post(this.prefix + '/Register', null, ud);
     }
@@ -28,7 +28,7 @@ export class UserService {
     }
 
     public savePersonalDetails(ud: UserDetails): Observable<ApiResponse<UserDetails>> {
-        return this.apiService.post(this.prefix + '/SavePersonalDetails', null, ud);
+        return this.apiService.post(this.prefix + '/SaveEditUserProfile', null, ud);
     }
 
     public saveBankDetails(ud: UserDetails): Observable<ApiResponse<UserDetails>> {

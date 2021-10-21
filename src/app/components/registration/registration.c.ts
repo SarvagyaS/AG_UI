@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
-import { UserAddressDetails } from "src/app/definitions/user-address-details";
-import { UserDetails } from "src/app/definitions/user-details";
-import { GetBrowserName } from "src/app/helpers/get-browser-name.f";
-import { LoginService } from "src/app/services/login-service";
-import { UserService } from "src/app/services/user.service";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserAddressDetails } from 'src/app/definitions/user-address-details';
+import { UserDetails } from 'src/app/definitions/user-details';
+import { GetBrowserName } from 'src/app/helpers/get-browser-name.f';
+import { LoginService } from 'src/app/services/login-service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({ templateUrl: './registration.t.html' })
 
@@ -16,7 +16,7 @@ export class RegistrationComponent implements OnInit {
     loading = false;
     submitted = false;
     loginSubmitted = false;
-    registerModal: boolean = false;
+    registerModal = false;
     isUserNameSelected: string;
     registrationForm: UserDetails = {userAddressDetails: [] as UserAddressDetails[]} as UserDetails;
     postalAddress: UserAddressDetails = {} as UserAddressDetails;
@@ -33,18 +33,7 @@ export class RegistrationComponent implements OnInit {
     }
 
     ngOnInit() {
-      // this.registerForm = this.formBuilder.group({
-      //   Id: [0],
-      //   first_name: ['', Validators.required],
-      //   last_name: ['', Validators.required],
-      //   email: ['', [Validators.required, Validators.email]],
-      //   mobile: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10),Validators.pattern("^[0-9]*$")]],
-      //   user_agent: [''],
-      //   password: ['', [Validators.required, Validators.minLength(6)]],
-      //   confirm_password: [''],
-      //   otp: ['',[Validators.required]],
-      // }, { validator: this.checkIfMatchingPasswords('password', 'confirm_password') });
-
+      this.billingAddress.is_same_as_postal_add = false;
       this.loginForm = this.formBuilder.group({
         username: [],
         password: [],
@@ -54,42 +43,32 @@ export class RegistrationComponent implements OnInit {
 
     checkIfMatchingPasswords(passwordKey: string, passwordConfirmationKey: string) {
       return (group: FormGroup) => {
-        let passwordInput = group.controls[passwordKey],
-          passwordConfirmationInput = group.controls[passwordConfirmationKey];
+        const passwordInput = group.controls[passwordKey];
+        const passwordConfirmationInput = group.controls[passwordConfirmationKey];
         if (passwordInput.value !== passwordConfirmationInput.value) {
-          return passwordConfirmationInput.setErrors({ notEquivalent: true })
+          return passwordConfirmationInput.setErrors({ notEquivalent: true });
         }
         else {
           return passwordConfirmationInput.setErrors(null);
         }
+      };
+    }
+
+    public onBillingAddressClick() {
+      this.billingAddress.is_same_as_postal_add = !this.billingAddress.is_same_as_postal_add;
+      if (this.billingAddress.is_same_as_postal_add) {
+        this.postalAddress.is_billing_address = false;
+        const add = JSON.parse(JSON.stringify(this.postalAddress));
+        add.is_same_as_postal_add = true;
+        this.billingAddress = add;
+        this.billingAddress.is_billing_address = true;
+      } else {
+        const userAddressDetails: UserAddressDetails = {} as UserAddressDetails;
+        this.postalAddress.is_billing_address = true;
+        this.billingAddress = userAddressDetails;
+        this.billingAddress.is_same_as_postal_add = false;
       }
     }
-
-   // get f() { return this.registerForm.controls; }
-
-    onRegistrationSubmit() {
-      this.submitted = true;
-      // if (this.registerForm.invalid) {
-      //   return;
-      // }
-      //this.registerForm.controls.user_agent.setValue(GetBrowserName());
-      // this.userService.register(this.registerForm.value)
-      //   .subscribe(
-      //     d => {
-      //       if (d.isSuccess && d.data && d.data.id > 0){
-      //         alert("Registered");
-      //         this.registerModal = false;
-      //       }
-      //       else{
-      //         alert("Not Registered");
-      //       }
-      //     },
-      //     error => {
-      //       alert("Not Registered");
-      //       this.loading = false;
-      //     });
-    }
-
 
 
     //////////////////////// LOGIN
@@ -97,13 +76,13 @@ export class RegistrationComponent implements OnInit {
 
     onLoginSubmit(){
       this.loginSubmitted = true;
-      var a = true;
-      if (this.isUserNameSelected == 'false') {
+      let a = true;
+      if (this.isUserNameSelected === 'false') {
         a = false;
-      } 
-      this.loginService.authenticate(this.l.username.value,this.l.password.value,this.l.phoneNo.value, a).subscribe(z=>{
-        if(z.id > 0){
-            if(!z.is_profile_update){
+      }
+      this.loginService.authenticate(this.l.username.value, this.l.password.value, this.l.phoneNo.value, a).subscribe(z => {
+        if (z.id > 0){
+            if (!z.is_profile_update){
                 this._router.navigate(['user-profile']);
             }
             else{
@@ -113,11 +92,11 @@ export class RegistrationComponent implements OnInit {
         else{
           alert('logged failed');
         }
-      })
+      });
     }
 
     forgotPassword(){
-      if(!this.l.mobile.value){
+      if (!this.l.mobile.value){
         alert('Please enter mobile.');
       }else{
         alert('Passowrd reset link has been sent to your registered email.');
@@ -126,19 +105,36 @@ export class RegistrationComponent implements OnInit {
 
 
     submitReg() {
-      var add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];
+      this.postalAddress.name = this.registrationForm.first_name;
+      const add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
       this.registrationForm.userAddressDetails = add;
-      this.userService.register(this.registrationForm).subscribe(d =>{
+      if (!isNaN(this.registrationForm.birthDay)) {
+        this.registrationForm.birthDay = +this.registrationForm.birthDay;
+    }else{
+        this.registrationForm.birthDay = null;
+    }
+
+      if (!isNaN(this.registrationForm.birthMonth)) {
+        this.registrationForm.birthMonth = + this.registrationForm.birthMonth;
+    }else{
+        this.registrationForm.birthMonth = null;
+    }
+      if (!isNaN(this.registrationForm.birthYear)) {
+        this.registrationForm.birthYear = + this.registrationForm.birthYear;
+    }else{
+        this.registrationForm.birthYear = null;
+    }
+      this.userService.savePersonalDetails(this.registrationForm).subscribe(d => {
         if (d.isSuccess && d.data && d.data.id > 0){
-                  alert("Registered");
+                  alert('Registered');
         //          this.registerModal = false;
                 }
                 else{
-                  alert("Not Registered");
+                  alert('Not Registered');
                 }
               },
               error => {
-                alert("Not Registered");
+                alert('Not Registered');
           //      this.loading = false;
               });
     }
