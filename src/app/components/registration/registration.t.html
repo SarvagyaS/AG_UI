@@ -1403,7 +1403,7 @@
                                 <span class="label">I am</span>
                                 <div class="gender_sign custom_img_radio">
                                    <span class="image_radio">
-                                      <input type="radio" name="gender" id="male" class="input-hidden"  [(ngModel)]="registrationForm.gender" [ngModelOptions]="{standalone: true}" (change)="registrationForm.gender = $event.target.value"/>
+                                      <input type="radio" name="gender" id="male" class="input-hidden" value="Male"  [(ngModel)]="registrationForm.gender" [ngModelOptions]="{standalone: true}" (change)="registrationForm.gender = $event.target.value"/>
                                       <label for="male" class="svg_sec">
                                          <img src="../../../assets/images/male.svg" alt="Male" />
                                       </label>
@@ -1411,17 +1411,17 @@
                                    </span>
 
                                    <span class="image_radio">
-                                      <input type="radio" name="gender" id="female" class="input-hidden"  [(ngModel)]="registrationForm.gender" [ngModelOptions]="{standalone: true}" (change)="registrationForm.gender = $event.target.value"/>
+                                      <input type="radio" name="gender" id="female" class="input-hidden"value="Female"  [(ngModel)]="registrationForm.gender" [ngModelOptions]="{standalone: true}" (change)="registrationForm.gender = $event.target.value"/>
                                       <label for="female" class="svg_sec">
-                                         <img src="../../../assets/images/female.svg" alt="Male" />
+                                         <img src="../../../assets/images/female.svg" alt="Female" />
                                       </label>
                                       <span>Female</span>
                                    </span>
 
                                    <span class="image_radio">
-                                      <input type="radio" name="gender" id="transgender" class="input-hidden"  [(ngModel)]="registrationForm.gender" [ngModelOptions]="{standalone: true}" (change)="registrationForm.gender = $event.target.value" />
+                                      <input type="radio" name="gender" id="transgender" class="input-hidden" value="Transgender"  [(ngModel)]="registrationForm.gender" [ngModelOptions]="{standalone: true}" (change)="registrationForm.gender = $event.target.value" />
                                       <label for="transgender" class="svg_sec">
-                                         <img src="../../../assets/images/transgender.svg" alt="Male" />
+                                         <img src="../../../assets/images/transgender.svg" alt="Transgender" />
                                       </label>
                                       <span>Transgender</span>
                                    </span>
@@ -1705,9 +1705,9 @@
                                       <span class="tooltiptext">Tooltip text</span>
                                    </a>
                                 </span>
-                                <select class="custom_select nationality_dropdown">
-                                   <option value="">Indian</option>
-                                   <option value="">Other Country</option>
+                                <select class="custom_select nationality_dropdown" [(ngModel)]="registrationForm.country_code" [ngModelOptions]="{standalone: true}">
+                                   <option value="Indian">Indian</option>
+                                   <option value="Other Country">Other Country</option>
                                 </select>
                              </li>
                           </ul>
@@ -1764,7 +1764,7 @@
 
                              <li class="col_6 non_indian">
                                 <div class="custom_input">
-                                   <input type="text" placeholder="Location">
+                                   <input type="text" placeholder="Location"  [(ngModel)]="postalAddress.city" [ngModelOptions]="{standalone: true}">
                                 </div>
                              </li>
 
@@ -1839,7 +1839,7 @@
 
                                <li class="col_6 non_indian">
                                   <div class="custom_input">
-                                     <input type="text" placeholder="Location" >
+                                     <input type="text" placeholder="Location" [(ngModel)]="billingAddress.city" [ngModelOptions]="{standalone: true}">
                                   </div>
                                </li>
 
@@ -1866,14 +1866,14 @@
                              <li class="indian">
                                 <select class="custom_select" [(ngModel)]="registrationForm.bank_name" [ngModelOptions]="{standalone: true}">
                                    <option>Bank Name</option>
-                                   <option>ICICI Bank</option>
-                                   <option>AXIS Bank</option>
+                                   <option value="ICICI Bank">ICICI Bank</option>
+                                   <option value="AXIS Bank">AXIS Bank</option>
                                 </select>
                              </li>
 
                              <li class="other_field non_indian">
                                 <div class="custom_input nickname_sec">
-                                   <input type="text" placeholder="Bank Name">
+                                   <input type="text" placeholder="Bank Name" [(ngModel)]="registrationForm.bank_name" [ngModelOptions]="{standalone: true}">
                                 </div>
                              </li>
 
@@ -1886,14 +1886,14 @@
                              <li class="indian">
                                 <select class="custom_select" [(ngModel)]="registrationForm.ifsc_code" [ngModelOptions]="{standalone: true}">
                                    <option>IFSC Code</option>
-                                   <option>ICICI Bank</option>
-                                   <option>AXIS Bank</option>
+                                   <option value="ICICI Bank">ICICI Bank</option>
+                                   <option value="AXIS Bank">AXIS Bank</option>
                                 </select>
                              </li>
 
                              <li class="other_field non_indian">
                                 <div class="custom_input nickname_sec">
-                                   <input type="text" placeholder="Swift Code">
+                                   <input type="text" placeholder="Swift Code" [(ngModel)]="registrationForm.ifsc_code" [ngModelOptions]="{standalone: true}">
                                 </div>
                              </li>
 

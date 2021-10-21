@@ -18,7 +18,8 @@ export class UserProfileComponent implements OnInit {
     billingAddress: UserAddressDetails = {} as UserAddressDetails;
     additionalPostalAddress: UserAddressDetails = {} as UserAddressDetails;
 
-    additionalAddress= false;
+    additionalAddress = false;
+    profileCompleted = 20;
 
     constructor(
         private _router: Router,
@@ -61,6 +62,12 @@ export class UserProfileComponent implements OnInit {
                   this.additionalAddress = true;
                   this.additionalPostalAddress = a.data[2];
                 }
+                const objlength = Object.getOwnPropertyNames(this.userDetails).length;
+                const blankValues  = Object.keys(this.userDetails).filter(key =>
+                  this.userDetails[key] === null || this.userDetails[key] === '' || this.userDetails[key] === 0).length;
+                  this.profileCompleted = Math.ceil((((objlength - blankValues) / objlength) * 100) / 10) * 10;
+                  console.log(this.profileCompleted)
+
             }
         });
     }

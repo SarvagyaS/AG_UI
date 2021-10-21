@@ -899,7 +899,7 @@
                <span class="progress_bar">
                   <span class="progress_inner"></span>
                </span>
-               <span class="profile_progress">20% Complete</span>
+               <span class="profile_progress">{{profileCompleted}}% Complete</span>
             </div>
          </div>
       </section>
@@ -2572,7 +2572,7 @@
                <span class="progress_bar">
                   <span class="progress_inner"></span>
                </span>
-               <span class="profile_progress">20% Complete</span>
+               <span class="profile_progress">{{profileCompleted}}% Complete</span>
             </div>
          </div>
       </section>
@@ -3196,9 +3196,9 @@
                   <ul>
                      <li>
                         <select class="custom_select" [(ngModel)]="userDetails.bank_name"name="vcx09">
-                           <option value=null>Bank Name</option>
-                           <option value="">ICICI Bank</option>
-                           <option value=null>AXIS Bank</option>
+                           <option value="null" >Bank Name</option>
+                           <option value="ICICI Bank">ICICI Bank</option>
+                           <option value="AXIS Bank">AXIS Bank</option>
                         </select>
                      </li>
 
@@ -3209,10 +3209,10 @@
                      </li>
 
                      <li>
-                        <select class="custom_select"  [(ngModel)]="userDetails.ifsc_code"name="vcx435">
-                           <option>IFSC Code</option>
-                           <option>ICICI Bank</option>
-                           <option>AXIS Bank</option>
+                        <select class="custom_select"  [(ngModel)]="userDetails.ifsc_code" name="vcx435">
+                           <option value="null">IFSC Code</option>
+                           <option value="ICICI Bank">ICICI Bank</option>
+                           <option value="AXIS Bank">AXIS Bank</option>
                         </select>
                      </li>
 
