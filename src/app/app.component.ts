@@ -2,6 +2,7 @@ import { LoginService } from './services/login-service';
 import { Component } from '@angular/core';
 import { UserDetails } from './definitions/user-details';
 import { Router } from '@angular/router';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   userDetails: UserDetails;
 
-  constructor(private _router: Router, private loginService: LoginService) {
+  constructor(private _router: Router, private loginService: LoginService, userService: UserService) {
     this.loginService.currentUser.subscribe((x) => {
       this.userDetails = x;
       if (this.userDetails && this.userDetails.id > 0) {

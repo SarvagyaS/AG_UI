@@ -131,13 +131,13 @@
 
 <header *ngIf="userDetails && userDetails.id > 0">
     <div class="main_header">
-       <div class="container">         
+       <div class="container">
           <div class="logo">
              <a href="index.html">
                 <img src="../assets/images/logo.png" alt="Astaguru" title="Astaguru">
              </a>
           </div>
-          
+
           <div class="profile_head">
              <div class="profile_info">
                 <a href="javascript:;" class="profile_img">
@@ -146,12 +146,12 @@
                 </a>
 
                 <div class="profile_box">
-                   <h4>Welcome {{userDetails.first_name}}</h4>                     
+                   <h4>Welcome {{userDetails.first_name}}</h4>
                    <span class="profile_tag">Your Profile</span>
                    <span class="progress_bar">
                       <span class="progress_inner"></span>
                    </span>
-                   <span class="profile_progress">20% Complete</span>
+                   <span class="profile_progress">{{userService.profileCompleted}} Complete</span>
                    <a href="javascript:;" class="btn btn-yellow">
                       Complete Profile
                    </a>
@@ -255,18 +255,18 @@
 
                          <div class="auction_notifi">
                             <h4>Auction Notifications</h4>
-                            <div class="auction_notifi_cont">                           
+                            <div class="auction_notifi_cont">
                                <p>
                                   Your notifications are on. You will stop receiving notifications from us if you switch it to off.
-                               </p>                                 
+                               </p>
 
                                <div class="common_toggle">
                                   <input type="checkbox" id="auc_not" name="auc_not">
                                   <label for="auc_not">
-                                    <span class="toggle-track"></span>                                      
+                                    <span class="toggle-track"></span>
                                   </label>
                                </div>
-                            </div>                           
+                            </div>
                          </div>
 
                          <div class="auction_email check_cont">
@@ -336,14 +336,14 @@
                                         <span class="checkmark"></span>
                                      </label>
                                   </li>
- 
+
                                   <li class="custom_check_cont">
                                      <label class="custom_checkbox">
                                         No
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                      </label>
-                                  </li>                                       
+                                  </li>
                                </ul>
 
                                <a href="javascript:;" class="btn btn-yellow">Request</a>
@@ -361,14 +361,14 @@
                                         <span class="checkmark"></span>
                                      </label>
                                   </li>
- 
+
                                   <li class="custom_check_cont">
                                      <label class="custom_checkbox">
                                         No
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                      </label>
-                                  </li>                                       
+                                  </li>
                                </ul>
 
                                <a href="javascript:;" class="btn btn-yellow">Submit</a>
@@ -377,7 +377,7 @@
                       </div>
                    </div>
                 </div>
-             </div>               
+             </div>
           </div>
        </div>
     </div>

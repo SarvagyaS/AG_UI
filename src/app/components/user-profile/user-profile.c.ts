@@ -65,8 +65,9 @@ export class UserProfileComponent implements OnInit {
                 const objlength = Object.getOwnPropertyNames(this.userDetails).length;
                 const blankValues  = Object.keys(this.userDetails).filter(key =>
                   this.userDetails[key] === null || this.userDetails[key] === '' || this.userDetails[key] === 0).length;
-                  this.profileCompleted = Math.ceil((((objlength - blankValues) / objlength) * 100) / 10) * 10;
-                  console.log(this.profileCompleted)
+                this.profileCompleted = Math.ceil((((objlength - blankValues) / objlength) * 100) / 10) * 10;
+                this.loginService.profileCompleted = this.profileCompleted;
+                console.log(this.profileCompleted);
 
             }
         });

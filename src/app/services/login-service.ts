@@ -14,7 +14,9 @@ export class LoginService {
     private readonly prefix = '/user';
     private currentUserSubject: BehaviorSubject<UserDetails>;
     public currentUser: Observable<UserDetails>;
-    
+
+    public profileCompleted = 0;
+
     constructor(private apiService: BaseApiService) {
         this.currentUserSubject = new BehaviorSubject<UserDetails>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
@@ -23,7 +25,7 @@ export class LoginService {
     public get currentUserValue(): UserDetails {
         return this.currentUserSubject.value;
     }
-    
+
     public authenticate(un: string, password: string, phoneNum: string, isUserNameSelected: boolean) {
         var kvp: Login = { Username: un, Password: password, PhoneNo: phoneNum, isUserNameSelected: isUserNameSelected };
         return this.apiService.post(this.prefix + '/Authenticate', null, kvp)
@@ -31,7 +33,7 @@ export class LoginService {
             if(d.id != 0){
                 localStorage.setItem('currentUser', JSON.stringify(d));
                 this.currentUserSubject.next(d);
-            }   
+            }
             return d;
         }));
     }
