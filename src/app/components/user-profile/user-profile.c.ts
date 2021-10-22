@@ -52,10 +52,10 @@ export class UserProfileComponent implements OnInit {
     mapAddress(){
         this.userService.getUserAddress(this.userDetails.id).subscribe(a => {
             if (a.isSuccess && a.data && a.data.length > 0){
-                if (a.data.find(x => x.is_billing_address === false)){
+                if (a.data.find(x => x.is_billing_address === false && x.additionAddId !== 1)){
                     this.postalAddress = a.data.find(x => x.is_billing_address === false);
                 }
-                if (a.data.find(x => x.is_billing_address === true)){
+                if (a.data.find(x => x.is_billing_address === true && x.additionAddId !== 1)){
                     this.billingAddress = a.data.find(x => x.is_billing_address === true);
                 }
                 if (a.data.find(x => x.additionAddId === 1)) {
@@ -221,10 +221,17 @@ export class UserProfileComponent implements OnInit {
         this.postalAddress.name = this.userDetails.first_name;
         delete this.postalAddress.userDetails;
         delete this.billingAddress.userDetails;
+        this.billingAddress.is_billing_address = true;
+        this.postalAddress.is_billing_address = false
+        this.billingAddress.additionAddId = 0;
+        this.postalAddress.additionAddId = 0;
+        this.billingAddress.name = this.userDetails.first_name;
+        this.postalAddress.name = this.userDetails.first_name;
         let add;
         if (this.additionalAddress) {
-          delete this.additionalPostalAddress.userDetails;
-          this.additionalPostalAddress.additionAddId = 1;
+            delete this.additionalPostalAddress.userDetails;
+            this.additionalPostalAddress.is_billing_address = false;
+            this.additionalPostalAddress.additionAddId = 1;
           add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
         } else {
           add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];

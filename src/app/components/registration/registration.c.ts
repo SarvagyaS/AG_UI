@@ -65,9 +65,10 @@ export class RegistrationComponent implements OnInit {
         this.billingAddress.is_billing_address = true;
       } else {
         const userAddressDetails: UserAddressDetails = {} as UserAddressDetails;
-        this.postalAddress.is_billing_address = true;
+        this.postalAddress.is_billing_address = false;
         this.billingAddress = userAddressDetails;
         this.billingAddress.is_same_as_postal_add = false;
+        this.billingAddress.is_billing_address = true;
       }
     }
 
@@ -79,7 +80,7 @@ export class RegistrationComponent implements OnInit {
         this.postalAddress.is_billing_address = false;
         const userAddressDetails: UserAddressDetails = {} as UserAddressDetails;
         this.additionalPostalAddress = userAddressDetails;
-        this.additionalPostalAddress.is_billing_address = true;
+        this.additionalPostalAddress.is_billing_address = false;
       } else {
         const userAddressDetails: UserAddressDetails = {} as UserAddressDetails;
         this.billingAddress.is_billing_address = true;
@@ -125,9 +126,16 @@ export class RegistrationComponent implements OnInit {
       this.postalAddress.name = this.registrationForm.first_name;
       delete this.postalAddress.userDetails;
       delete this.billingAddress.userDetails;
+      this.billingAddress.is_billing_address = true;
+      this.postalAddress.is_billing_address = false
+      this.billingAddress.additionAddId = 0;
+      this.postalAddress.additionAddId = 0;
+      this.billingAddress.name = this.registrationForm.first_name;
+      this.postalAddress.name = this.registrationForm.first_name;
       let add;
       if (this.additionalAddress) {
         delete this.additionalPostalAddress.userDetails;
+        this.additionalPostalAddress.is_billing_address = false;
         this.additionalPostalAddress.additionAddId = 1;
         add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
       } else {
