@@ -167,9 +167,15 @@ export class UserProfileComponent implements OnInit {
         });
 
 
-        this.http.post(Constants.apiBaseUrl + '/Upload/UploadImage', formData, {reportProgress: true, observe: 'events'})
-      .subscribe(event => {
-          console.log('uploaded');
+        this.http.post(Constants.apiBaseUrl + '/Upload/UploadImage', formData)
+      .subscribe((a):any => {
+          var aa: any = a;
+          if(aa.isSuccess){
+            this.userDetails.profilePicUrl = null;
+            setTimeout(() => {
+                this.userDetails.profilePicUrl = aa.data;
+            }, 100);
+          }
         });
         // this.uploadService.upload(formData).subscribe(c=> {
         //     if (c.isSuccess && c.data && c.data.length > 0){
