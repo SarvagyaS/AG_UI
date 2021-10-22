@@ -74,6 +74,7 @@ export class UserProfileComponent implements OnInit {
 
     saveUserAdd(){
         var ud: UserAddressDetails;
+
         // if(fromPostal){
         //     ud = this.postalAddress;
         //     ud.is_billing_address = false;
@@ -81,6 +82,7 @@ export class UserProfileComponent implements OnInit {
         // }else{
         //     ud = this.billingAddress;
         // }
+
         this.postalAddress.userDetailsId = this.userDetails.id;
         this.billingAddress.userDetailsId = this.userDetails.id;
 
@@ -177,7 +179,8 @@ export class UserProfileComponent implements OnInit {
       }
 
       getUrl(){
-        return this.sanitizer.bypassSecurityTrustResourceUrl(this.userDetails.profilePicUrl);
+          return Constants.baseUrl + "\\" + this.userDetails.profilePicUrl;
+        // return this.sanitizer.bypassSecurityTrustResourceUrl(this.userDetails.profilePicUrl);
       }
 
 
