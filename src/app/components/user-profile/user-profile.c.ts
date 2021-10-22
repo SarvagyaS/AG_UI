@@ -207,23 +207,31 @@ export class UserProfileComponent implements OnInit {
 
       public onBillingAddressClick() {
         this.billingAddress.is_same_as_postal_add = !this.billingAddress.is_same_as_postal_add;
+        var exisId = this.billingAddress.id;
         if (this.billingAddress.is_same_as_postal_add) {
           this.postalAddress.is_billing_address = false;
           const add = JSON.parse(JSON.stringify(this.postalAddress));
+          add.id = exisId;
           add.is_same_as_postal_add = true;
           this.billingAddress = add;
           this.billingAddress.is_billing_address = true;
         } else {
           const userAddressDetails: UserAddressDetails = {} as UserAddressDetails;
-          this.postalAddress.is_billing_address = true;
           this.billingAddress = userAddressDetails;
+          this.postalAddress.is_billing_address =  false;
+          this.billingAddress.is_billing_address =  true;
+          this.postalAddress.is_same_as_postal_add =  false;
           this.billingAddress.is_same_as_postal_add = false;
+          this.billingAddress.id = exisId;
         }
       }
 
 
 
       save() {
+        this.billingAddress.userDetailsId = this.userDetails.id;
+        this.postalAddress.userDetailsId = this.userDetails.id;
+        
         this.postalAddress.name = this.userDetails.first_name;
         delete this.postalAddress.userDetails;
         delete this.billingAddress.userDetails;
@@ -236,6 +244,7 @@ export class UserProfileComponent implements OnInit {
         let add;
         if (this.additionalAddress) {
             delete this.additionalPostalAddress.userDetails;
+            this.additionalPostalAddress.userDetailsId = this.userDetails.id;
             this.additionalPostalAddress.is_billing_address = false;
             this.additionalPostalAddress.additionAddId = 1;
           add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
