@@ -128,6 +128,7 @@ export class RegistrationComponent implements OnInit {
       let add;
       if (this.additionalAddress) {
         delete this.additionalPostalAddress.userDetails;
+        this.additionalPostalAddress.additionAddId = 1;
         add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
       } else {
         add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];

@@ -58,9 +58,9 @@ export class UserProfileComponent implements OnInit {
                 if (a.data.find(x => x.is_billing_address === true)){
                     this.billingAddress = a.data.find(x => x.is_billing_address === true);
                 }
-                if (a.data && a.data[2]) {
+                if (a.data.find(x => x.additionAddId === 1)) {
                   this.additionalAddress = true;
-                  this.additionalPostalAddress = a.data[2];
+                  this.additionalPostalAddress = a.data.find(x => x.additionAddId === 1);
                 }
                 const objlength = Object.getOwnPropertyNames(this.userDetails).length;
                 const blankValues  = Object.keys(this.userDetails).filter(key =>
@@ -224,6 +224,7 @@ export class UserProfileComponent implements OnInit {
         let add;
         if (this.additionalAddress) {
           delete this.additionalPostalAddress.userDetails;
+          this.additionalPostalAddress.additionAddId = 1;
           add = [ this.postalAddress, this.billingAddress, this.additionalPostalAddress ] as UserAddressDetails[];
         } else {
           add = [ this.postalAddress, this.billingAddress ] as UserAddressDetails[];
@@ -247,6 +248,8 @@ export class UserProfileComponent implements OnInit {
       }
         this.userService.savePersonalDetails(this.userDetails).subscribe(d => {
           if (d.isSuccess && d.data && d.data.id > 0){
+              this.getUserDetails();
+              this.mapAddress();
                     alert('Registered');
           //          this.registerModal = false;
                   }
